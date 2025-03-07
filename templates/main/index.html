@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section id="home" class="hero">
+  <h1>Welcome to KridaShastra</h1>
+  <p>Your Partner in Sports Science & Equipment Solutions</p>
+  <a href="{% url 'about' %}" class="cta">Discover Our Legacy</a>
+  <a href="{% url 'contact' %}" class="cta">Connect with Us</a>
+</section>
+
+<section class="value-prop">
+  <h2>Our Success in India</h2>
+  <p>Trusted by Indian government institutions for premier sports science equipment and consulting.</p>
+</section>
+{% endblock %}
