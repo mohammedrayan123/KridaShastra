@@ -2,15 +2,340 @@
 {% load static %}
 
 {% block content %}
-<section id="home" class="hero">
-  <h1>Welcome to KridaShastra</h1>
-  <p>Your Partner in Sports Science & Equipment Solutions</p>
-  <a href="{% url 'about' %}" class="cta">Discover Our Legacy</a>
-  <a href="{% url 'contact' %}" class="cta">Connect with Us</a>
-</section>
 
-<section class="value-prop">
-  <h2>Our Success in India</h2>
-  <p>Trusted by Indian government institutions for premier sports science equipment and consulting.</p>
-</section>
+
+    <!-- Your content here -->
+
+  
+  
+<!-- Sports Menu (Hidden on Small Screens) -->
+<div class="bg-stone-950 text-white font-bold hidden md:flex group">
+    <div class="max-w-7xl mx-auto flex justify-center gap-6 py-2 px-4 w-full">
+      <a href="#" class="hover:bg-sky-700 px-4 py-2 hover:bg-sky-700">FOOTBALL</a>
+      <a href="#" class="hover:bg-sky-700 px-4 py-2 hover:bg-sky-700">CRICKET</a>
+      <a href="#" class="hover:bg-sky-700 px-4 py-2 hover:bg-sky-700">TENNIS</a>
+      <a href="#" class="hover:bg-sky-700 px-4 py-2 hover:bg-sky-700">GOLF</a>
+      <a href="#" class="hover:bg-sky-700 px-4 py-2 hover:bg-sky-700">RUGBY</a>
+      <a href="#" class="hover:bg-sky-700 px-4 py-2 hover:bg-sky-700">GYM & FITNESS</a>
+      <a href="#" class="bg-red-600 px-4 py-2 rounded">SALE</a>
+      <a href="#" class="hover:bg-sky-700 px-4 py-2 hover:bg-sky-700">ALL SPORTS</a>
+    </div>
+</div>
+  
+
+  
+
+<!-- Hero here -->
+  <div
+  class="hero min-h-[65vh]"
+  style="background-image: url(https://images.unsplash.com/vector-1738303238864-f8fb0e6d55ea?q=80&w=3520&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+  <div class="hero-overlay"></div>
+  <div class="hero-content text-neutral-content text-center">
+    <div class="max-w-md">
+      <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+      <p class="mb-5">
+        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+        quasi. In deleniti eaque aut repudiandae et a id nisi.
+      </p>
+      <button class="btn btn-secondary">Get Started</button>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Features Section -->
+
+<div class="max-w-7xl mx-auto px-4 my-8 flex items-center gap-8">
+    <!-- Left Section (Title & Description) -->
+    <div class="w-1/3">
+      <h2 class="text-3xl font-bold text-gray-800">Our Featured Products</h2>
+      <p class="mt-2 text-gray-600">Discover our latest and most popular products, carefully curated for you.</p>
+    </div>
+  
+    <!-- Right Section (Carousel) -->
+    <div class="w-2/3">
+      <div class="carousel rounded-box space-x-4">
+        <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
+          <img class="h-40 w-full rounded-lg" src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" alt="Image 1" />
+        </div>
+        <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
+          <img class="h-40 w-full rounded-lg" src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp" alt="Image 2" />
+        </div>
+        <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
+          <img class="h-40 w-full rounded-lg" src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp" alt="Image 3" />
+        </div>
+        <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
+          <img class="h-40 w-full rounded-lg" src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp" alt="Image 4" />
+        </div>
+        <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
+          <img class="h-40 w-full rounded-lg" src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp" alt="Image 5" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- Product Grid Section 1-->
+
+  <div class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <!-- Product Card 1 -->
+    <div class="relative group overflow-hidden rounded-lg shadow-lg" data-aos="fade-up">
+      <img src="https://source.unsplash.com/400x300/?shoes" alt="Product" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <h3 class="text-white text-lg font-semibold">Running Shoes</h3>
+        <p class="text-white text-sm mt-2">$49.99</p>
+      </div>
+    </div>
+  
+    <!-- Product Card 2 -->
+    <div class="relative group overflow-hidden rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
+      <img src="https://images.unsplash.com/photo-1562771242-a02d9090c90c?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <h3 class="text-white text-lg font-semibold">Luxury Watch</h3>
+        <p class="text-white text-sm mt-2">$199.99</p>
+      </div>
+    </div>
+  
+    <!-- Product Card 3 -->
+    <div class="relative group overflow-hidden rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
+      <img src="https://source.unsplash.com/400x300/?headphones" alt="Product" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <h3 class="text-white text-lg font-semibold">Wireless Headphones</h3>
+        <p class="text-white text-sm mt-2">$99.99</p>
+      </div>
+    </div>
+  
+    <!-- Product Card 4 -->
+    <div class="relative group overflow-hidden rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="300">
+      <img src="https://source.unsplash.com/400x300/?backpack" alt="Product" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <h3 class="text-white text-lg font-semibold">Travel Backpack</h3>
+        <p class="text-white text-sm mt-2">$79.99</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Initialize AOS for Smooth Scroll Animation -->
+  <script>
+    AOS.init({
+      duration: 800, // Animation duration in ms
+      once: true, // Animation triggers only once
+    });
+  </script>
+  
+
+
+<!-- Product Grid Section 2-->
+
+<!-- Include AOS Library for Scroll Animation -->
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+  
+  <!-- Product Carousel Container -->
+  <div class="relative max-w-7xl mx-auto px-4 py-10">
+    <!-- Left Arrow -->
+    <button class="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full z-10" onclick="scrollLeft()">
+      ❮
+    </button>
+  
+    <!-- Product Slider -->
+    <div id="productSlider" class="flex overflow-x-auto scroll-smooth space-x-6 scrollbar-hide">
+      <!-- Product Card 1 -->
+      <div class="relative group flex-shrink-0 w-64" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1562771242-a02d9090c90c?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-56 object-cover rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-white text-lg font-semibold">Running Shoes</h3>
+          <p class="text-white text-sm mt-2">$49.99</p>
+        </div>
+      </div>
+  
+      <!-- Add more product cards here -->
+      <div class="relative group flex-shrink-0 w-64" data-aos="fade-up">
+        <img src="/Users/globalmedicaldevices/Documents/ABL25/KridaShastra/KridaShastra/static/images/productsample1.jpg" class="w-full h-56 object-cover rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-white text-lg font-semibold">Luxury Watch</h3>
+          <p class="text-white text-sm mt-2">$199.99</p>
+        </div>
+      </div>
+  
+      <div class="relative group flex-shrink-0 w-64" data-aos="fade-up">
+        <img src="/Users/globalmedicaldevices/Documents/ABL25/KridaShastra/KridaShastra/static/images/productsample1.jpg" class="w-full h-56 object-cover rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-white text-lg font-semibold">Wireless Headphones</h3>
+          <p class="text-white text-sm mt-2">$99.99</p>
+        </div>
+      </div>
+  
+    </div>
+  
+    <!-- Right Arrow -->
+    <button class="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full z-10" onclick="scrollRight()">
+      ❯
+    </button>
+  </div>
+  
+  <!-- JS for Sliding Effect -->
+  <script>
+    function scrollLeft() {
+      document.getElementById('productSlider').scrollBy({ left: -300, behavior: 'smooth' });
+    }
+    function scrollRight() {
+      document.getElementById('productSlider').scrollBy({ left: 300, behavior: 'smooth' });
+    }
+    AOS.init({ duration: 800, once: true });
+  </script>
+  
+
+<!-- Products Section 3 -->
+
+
+<!-- Container with "View All" Button -->
+<div class="max-w-7xl mx-auto px-4 py-10">
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-2xl font-bold">Featured Products</h2>
+      <a href="#" class="text-blue-500 font-semibold hover:underline flex items-center">
+        View All →
+      </a>
+    </div>
+  
+    <!-- Product Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Product Card 1 -->
+      <div class="relative group overflow-hidden rounded-lg shadow-lg" data-aos="fade-up">
+        <img src="https://source.unsplash.com/400x300/?shoes" alt="Product" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-white text-lg font-semibold">Running Shoes</h3>
+          <p class="text-white text-sm mt-2">$49.99</p>
+        </div>
+      </div>
+  
+      <!-- Product Card 2 -->
+      <div class="relative group overflow-hidden rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://source.unsplash.com/400x300/?watch" alt="Product" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-white text-lg font-semibold">Luxury Watch</h3>
+          <p class="text-white text-sm mt-2">$199.99</p>
+        </div>
+      </div>
+  
+      <!-- Product Card 3 -->
+      <div class="relative group overflow-hidden rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://source.unsplash.com/400x300/?headphones" alt="Product" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-white text-lg font-semibold">Wireless Headphones</h3>
+          <p class="text-white text-sm mt-2">$99.99</p>
+        </div>
+      </div>
+  
+      <!-- Product Card 4 -->
+      <div class="relative group overflow-hidden rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="300">
+        <img src="https://source.unsplash.com/400x300/?backpack" alt="Product" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-white text-lg font-semibold">Travel Backpack</h3>
+          <p class="text-white text-sm mt-2">$79.99</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Initialize AOS for Smooth Scroll Animation -->
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
+  
+
+  <div class="max-w-7xl mx-auto px-4 py-10">
+    <!-- Title + Arrows -->
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-2xl font-bold">Featured Products</h2>
+      <div class="flex space-x-4">
+        <!-- Left Arrow -->
+        <button onclick="scrollLeft()" class="bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700 transition">
+          ❮
+        </button>
+        <!-- Right Arrow -->
+        <button onclick="scrollRight()" class="bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700 transition">
+          ❯
+        </button>
+      </div>
+    </div>
+  
+    <!-- Product Slider -->
+    <div id="productSlider" class="flex overflow-x-auto scroll-smooth space-x-6 scrollbar-hide">
+      <!-- Product Cards (6 in total) -->
+      <div class="relative group flex-shrink-0 w-64" data-aos="fade-up">
+        <img src="https://source.unsplash.com/400x300/?shoes" class="w-full h-56 object-cover rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-white text-lg font-semibold">Running Shoes</h3>
+          <p class="text-white text-sm mt-2">$49.99</p>
+        </div>
+      </div>
+  
+      <div class="relative group flex-shrink-0 w-64" data-aos="fade-up">
+        <img src="https://source.unsplash.com/400x300/?watch" class="w-full h-56 object-cover rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-white text-lg font-semibold">Luxury Watch</h3>
+          <p class="text-white text-sm mt-2">$199.99</p>
+        </div>
+      </div>
+  
+      <div class="relative group flex-shrink-0 w-64" data-aos="fade-up">
+        <img src="https://source.unsplash.com/400x300/?headphones" class="w-full h-56 object-cover rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-white text-lg font-semibold">Wireless Headphones</h3>
+          <p class="text-white text-sm mt-2">$99.99</p>
+        </div>
+      </div>
+  
+      <div class="relative group flex-shrink-0 w-64" data-aos="fade-up">
+        <img src="https://source.unsplash.com/400x300/?backpack" class="w-full h-56 object-cover rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-white text-lg font-semibold">Travel Backpack</h3>
+          <p class="text-white text-sm mt-2">$79.99</p>
+        </div>
+      </div>
+  
+      <!-- Hidden Products (Revealed on Scroll) -->
+      <div class="relative group flex-shrink-0 w-64 hidden md:block" data-aos="fade-up">
+        <img src="https://source.unsplash.com/400x300/?sunglasses" class="w-full h-56 object-cover rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-white text-lg font-semibold">Stylish Sunglasses</h3>
+          <p class="text-white text-sm mt-2">$59.99</p>
+        </div>
+      </div>
+  
+      <div class="relative group flex-shrink-0 w-64 hidden md:block" data-aos="fade-up">
+        <img src="https://source.unsplash.com/400x300/?perfume" class="w-full h-56 object-cover rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-white text-lg font-semibold">Premium Perfume</h3>
+          <p class="text-white text-sm mt-2">$89.99</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- JavaScript for Sliding -->
+  <script>
+    function scrollLeft() {
+      document.getElementById('productSlider').scrollBy({ left: -300, behavior: 'smooth' });
+    }
+  
+    function scrollRight() {
+      document.getElementById('productSlider').scrollBy({ left: 300, behavior: 'smooth' });
+    }
+  
+    AOS.init({ duration: 800, once: true });
+  </script>
+
+
+<!-- <div class="container mx-auto px-4"></div>
+
+
+
+
+</div> -->
 {% endblock %}
