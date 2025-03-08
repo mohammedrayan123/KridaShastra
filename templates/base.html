@@ -14,6 +14,15 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+<style>
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+    }
+    .animate-bounce {
+        animation: bounce 1.5s infinite;
+    }
+</style>
     <script>
       tailwind.config = {
         theme: { extend: {} },
@@ -28,83 +37,164 @@
 
     <link rel="stylesheet" href="{% static '/css/styles.css' %}" />
     <script src="{% static '/js/scripts.js' %}"></script>
+      <!-- Add margin-top to prevent overlap -->
+      <style>
+        body {
+          padding-top: 80px; /* Prevents navbar from overlapping content */
+        }
+      
+        /* Default navbar background */
+        #navbar {
+          background: rgba(255, 255, 255, 0.9); /* Initial semi-transparent background */
+          backdrop-filter: blur(5px); /* No blur initially */
+        }
+      
+        /* Navbar effect on scroll */
+        .scrolled {
+          background: rgba(255, 255, 255, 0.5); /* More transparency */
+          backdrop-filter: blur(10px); /* Apply blur */
+        }
+      </style>
   </head>
   <body>
     <!-- Header with Navigation -->
-    <div class="navbar bg-base-100 shadow-sm h-20">
-      <div class="navbar-start">
-        <div class="dropdown">
-          <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h7"
-              />
-            </svg>
+    <div id="navbar" class="navbar h-20 fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"/>
+              </svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow">
+              <li><a>Homepage</a></li>
+              <li><a>Portfolio</a></li>
+              <li><a>About</a></li>
+            </ul>
           </div>
-          <ul
-            tabindex="0"
-            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow"
-          >
-            <li><a>Homepage</a></li>
-            <li><a>Portfolio</a></li>
-            <li><a>About</a></li>
-          </ul>
+        </div>
+        <div class="navbar-center">
+          <a class="btn btn-ghost text-2xl">daisyUI</a>
+        </div>
+        <div class="navbar-end">
+          <button class="btn btn-ghost btn-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </button>
+          <button class="btn btn-ghost btn-circle">
+            <div class="indicator">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+              </svg>
+              <span class="badge badge-xs badge-primary indicator-item"></span>
+            </div>
+          </button>
         </div>
       </div>
-      <div class="navbar-center">
-        <a class="btn btn-ghost text-2xl">daisyUI</a>
-        <!-- Increased font size for better proportion -->
-      </div>
-      <div class="navbar-end">
-        <button class="btn btn-ghost btn-circle">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-        </button>
-        <button class="btn btn-ghost btn-circle">
-          <div class="indicator">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-              />
-            </svg>
-            <span class="badge badge-xs badge-primary indicator-item"></span>
-          </div>
-        </button>
-      </div>
-    </div>
+      
+      <!-- Add padding to prevent content overlap -->
+
+      
+
+      
+      
+
+      
+
+      
+    
+
 
     <!-- Content Block -->
     {% block content %}{% endblock %}
+   <!-- Sticky Contact Us Button -->
+<!-- Sticky Contact Button -->
+<!-- Sticky Contact Button -->
+<button id="contactBtn" class="fixed bottom-6 right-6 flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 animate-bounce">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE60lEQVR4nN2aa4yeQxTHZ6t4lbY02iVoRd36xWUjQoME1TR8QJOKRFakgqigITRL3RKJRgiClKAfpEJIKRHXImgtcauqCO2qS2g3ui5p1WVrf3LkP8z7vM9lntc+u/v6J81mnznnzDkzZ878z2ydG0YAo4DTgfuBtUAvsF0/1wCLgVNNzo1UAMfL+Ri8D0x3Iw3A2cDvcvJz4AqgA9hTuzRRvy8AeiT3GzDHjRQARwK/yrlbgNEF8jsDt0vegu9wIwHAa3LqnpJ6d0nvQ6CtOg/jnDlcznwP7FZStwZ8Lf0Z1XkZ58wNcuTOJvUXSn9xsw7sAlwEvABsBLYpX1cDF8ZuNfCsHDmtST+Okf6aZpQPAz4rKI+FKwxMBn4BBoB9mgxkgubrK6s4zZSk/A4wG9gXGKMSaWV0q5w7pMDWY7LzaDNBGIAdZeMPFwtgLLBeio+bkQy5JZK5KsfWCQrWdmS/aCcSAPbWXL0uFsBDwa1aUz3vBC4Dzgjk5kjuxRxbb0rm+mgHUmDzys6KWIWZWkE71Ifq24PBmbCxsUHuGzbn2PNlc3lRCuYBeEp2ro4R3km04R8FpZlRhH6ROjsXNwJ3A29JtifH5jlKK8OmQidSABwbLG57jMKVmnCtpw/KcX/gn0ipWhbk3Mj8ptCJBMS/LMUNN7kiAOOAH6UwM/g+T9/u051ysSiD/bvcp1mEfVtRylIMYJb0LEXHxCgsSDtMwDX6fnMZB1Lsb5Kd9pJ6S6TXFSNc063dwGWCdLutCf9DO8/JjjVMu5bQ+0R6xcxXpdXwbsZhNSxtwv/QznEqGB7fAYuswBTo9Ul+Qswkz0v4gpSxGUV3RSyAk4BuVT+PRQU62yRXKzLerpUyIrhHRjNk6P6vgQTl3C7St2V3Y4F8v+ReVTNm99wOaYKXSnB5hiFffl8W212ptLA29BEbT8hPAq7VxOuAD4AHtBvGDDbXV29WFgTyBo34BrgkKfi0BjszDJ2n8T/Jxr22SsD5wBbicUReEB7GMFJ068kj8KUGDqob+HfcVtOjRyzYqtxexp+CHF6ln/3qs23yNjHlucEdFWJ+2pxJaCcbkBTy9CG1/QQ+1rjl9O4p49OBn/0qWaAZdvzOh/jCLtk0eQ8t2vqYQPxKNRz0oJd4z3I/bVwys2WnM6LVTWJpTpswGng4Q68hEB/tVFchFGwWjMedBUzRDkxJVLaoQHxun1hxIPboNqhwiQnu0PeFBc1RdxpBtLOlsVUR91WlgZyp7x9lNT56GEN0+hTjSurdTzZaE/O6IeZcaSA1XXAeLwEHJ2T2Bzbk2PwKOCAvENnprywQg90hosvW/fnXwLrLChgPXKfd2aqyvVp3yXgXgQTHGvxAEvTC1/u+wXw0rjy1Mvp2/yr4A3C0K/egZ7v0SsrYxCENJAjmScn/VPTMaZepmKn17x51zZMtyJAHEtyqxm5Rv71MFHqcCsSk4E9nWwJi6Q/0ZBcAOHdYAjGI9M0PikAWBtTKdgS38VEuAHDrsAWSyO8uXYy9OjtG+FbocWJaymPBvAzyOXyBlIF6EsOy4NvUwQ7C4KqEqMh2tc5/M2btZmsFYgCe0VxdegD/tlUDmaW5NogN0KqBjAI+1XwDLRtI4mGvMrihgF5V1rV8IIk/Kbd8IAf+XwJp0xNRawdiCP4nUMsH8nrVgfwFzi7H98g0S+AAAAAASUVORK5CYII=" alt="muscle-flexing" class="w-6 h-6">
+    <span class="font-semibold">Let's Connect</span>
+</button>
+
+<!-- Tailwind CSS for animation -->
+
+
+
+
+  
+  <!-- Contact Form Popup -->
+  <div id="contactForm" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center opacity-0 invisible transition-opacity duration-300">
+    <div class="bg-white rounded-lg shadow-lg w-[700px] md:w-[900px] p-6 flex transform scale-90 transition-transform duration-300">
+      
+      <!-- Left Section: Text + GIF -->
+      <div class="w-1/2 flex flex-col justify-center items-center text-center p-6 bg-sky-100 rounded-l-lg">
+        <h2 class="text-2xl font-bold text-sky-600 mb-4">Let's Connect!</h2>
+        <p class="text-gray-600 mb-6">Have a question? Fill out the form, and we'll get back to you soon.</p>
+        <img src="https://media.giphy.com/media/JFawGLFMCJNDi/giphy.gif" alt="Contact GIF" class="w-32 h-32">
+      </div>
+  
+      <!-- Right Section: Contact Form -->
+      <div class="w-1/2 p-6">
+        <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+  
+        <form id="contactFormContent">
+          <div class="mb-4">
+            <label class="block text-gray-700 font-semibold">Name</label>
+            <input type="text" id="name" class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500" required>
+          </div>
+  
+          <div class="mb-4">
+            <label class="block text-gray-700 font-semibold">Email</label>
+            <input type="email" id="email" class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500" required>
+          </div>
+  
+          <div class="mb-4">
+            <label class="block text-gray-700 font-semibold">Phone</label>
+            <input type="tel" id="phone" class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500" required>
+          </div>
+  
+          <div class="flex justify-between">
+            <button type="button" id="closeBtn" class="text-gray-600 hover:text-gray-800">Cancel</button>
+            <button type="submit" class="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded-lg">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <!-- JavaScript for Popup -->
+  <script>
+    const contactBtn = document.getElementById("contactBtn");
+    const contactForm = document.getElementById("contactForm");
+    const closeBtn = document.getElementById("closeBtn");
+    const formPopup = contactForm.querySelector("div");
+  
+    contactBtn.addEventListener("click", function() {
+      contactForm.classList.remove("invisible", "opacity-0");
+      contactForm.classList.add("opacity-100");
+      formPopup.classList.remove("scale-90");
+      formPopup.classList.add("scale-100");
+    });
+  
+    closeBtn.addEventListener("click", function() {
+      contactForm.classList.add("opacity-0");
+      contactForm.classList.remove("opacity-100");
+      formPopup.classList.add("scale-90");
+      formPopup.classList.remove("scale-100");
+      
+      setTimeout(() => {
+        contactForm.classList.add("invisible");
+      }, 300); // Wait for animation to finish before hiding
+    });
+  
+    document.getElementById("contactFormContent").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent actual submission
+      alert("Form Submitted!"); // Replace with actual handling
+      closeBtn.click(); // Close the form after submission
+    });
+  </script>
+  
+  
 
     <!-- Footer -->
         <footer class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
@@ -166,6 +256,16 @@
             </nav>
           </footer>
 
-
+      <!-- JavaScript for Blur + Transparent Effect -->
+      <script>
+        window.addEventListener("scroll", function () {
+          const navbar = document.getElementById("navbar");
+          if (window.scrollY > 50) {
+            navbar.classList.add("scrolled"); // Apply blur + transparency
+          } else {
+            navbar.classList.remove("scrolled"); // Remove effect
+          }
+        });
+      </script>
   </body>
 </html>
