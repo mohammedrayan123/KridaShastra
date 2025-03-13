@@ -31,7 +31,7 @@ urlpatterns = [
     path('services/', views.services, name='services'),
     
     # Networking Page
-    path('networking/', views.networking, name='networking'),
+    path('products/', views.products, name='products'),
     
     # Insights Page
     path('insights/', views.insights, name='insights'),

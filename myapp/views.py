@@ -9,8 +9,8 @@ def about(request):
 def services(request):
     return render(request, 'main/services.html')
 
-def networking(request):
-    return render(request, 'main/networking.html')
+def products(request):
+    return render(request, 'main/products.html')
 
 def insights(request):
     return render(request, 'main/insights.html')

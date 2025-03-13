@@ -1,0 +1,167 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+<section class="bg-black text-white py-12 text-center">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold">Premium Sports Equipment</h1>
+        <p class="text-lg mt-2">
+            Discover our comprehensive range of high-quality sports science equipment designed for 
+            professional institutions, government bodies, and training centers.
+        </p>
+    </div>
+</section>
+
+<section class="bg-gray-100 py-12">
+    <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-gray-900">Our Equipment Categories</h2>
+        <p class="text-gray-600 text-center mt-2">
+            Explore our range of professional sports equipment categories tailored for institutions across India.
+        </p>
+
+        <div class="mt-8 bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-semibold text-blue-900 flex items-center">
+                <span class="mr-2">📊</span> Performance Analysis
+            </h3>
+            <p class="text-gray-600 mt-1">Cutting-edge technology for analyzing and improving athlete performance</p>
+        
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Motion Capture System -->
+                <div class="bg-gray-50 p-4 rounded-lg border">
+                    <img src="your-image-url.jpg" alt="Motion Capture System" class="w-full h-40 object-cover rounded-lg">
+                    <h4 class="text-lg font-semibold text-gray-900 flex items-center mt-3">
+                        Motion Capture System 
+                        <span class="bg-blue-500 text-white text-xs font-bold ml-2 px-2 py-1 rounded">Premium</span>
+                    </h4>
+                    <p class="text-gray-600 text-sm mt-1">
+                        High-precision motion tracking for detailed biomechanical analysis.
+                    </p>
+                    <a href="#" class="text-blue-600 font-medium mt-3 inline-block">Request Info →</a>
+                </div>
+        
+                <!-- Force Platforms -->
+                <div class="bg-gray-50 p-4 rounded-lg border">
+                    <img src="your-image-url.jpg" alt="Force Platforms" class="w-full h-40 object-cover rounded-lg">
+                    <h4 class="text-lg font-semibold text-gray-900 mt-3">Force Platforms</h4>
+                    <p class="text-gray-600 text-sm mt-1">
+                        Measure ground reaction forces for jump and gait analysis.
+                    </p>
+                    <a href="#" class="text-blue-600 font-medium mt-3 inline-block">Request Info →</a>
+                </div>
+        
+                <!-- Video Analysis Software -->
+                <div class="bg-gray-50 p-4 rounded-lg border">
+                    <img src="your-image-url.jpg" alt="Video Analysis Software" class="w-full h-40 object-cover rounded-lg">
+                    <h4 class="text-lg font-semibold text-gray-900 flex items-center mt-3">
+                        Video Analysis Software
+                        <span class="bg-blue-700 text-white text-xs font-bold ml-2 px-2 py-1 rounded">Bestseller</span>
+                    </h4>
+                    <p class="text-gray-600 text-sm mt-1">
+                        Professional software for frame-by-frame movement analysis.
+                    </p>
+                    <a href="#" class="text-blue-600 font-medium mt-3 inline-block">Request Info →</a>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="mt-8 bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-semibold text-blue-900 flex items-center">
+                <span class="mr-2">📊</span> Performance Analysis
+            </h3>
+            <p class="text-gray-600 mt-1">Cutting-edge technology for analyzing and improving athlete performance</p>
+        
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Motion Capture System -->
+                <div class="bg-gray-50 p-4 rounded-lg border">
+                    <img src="your-image-url.jpg" alt="Motion Capture System" class="w-full h-40 object-cover rounded-lg">
+                    <h4 class="text-lg font-semibold text-gray-900 flex items-center mt-3">
+                        Motion Capture System 
+                        <span class="bg-blue-500 text-white text-xs font-bold ml-2 px-2 py-1 rounded">Premium</span>
+                    </h4>
+                    <p class="text-gray-600 text-sm mt-1">
+                        High-precision motion tracking for detailed biomechanical analysis.
+                    </p>
+                    <button onclick="openModal('Motion Capture System')" class="text-blue-600 font-medium mt-3 inline-block">Request Info →</button>
+                </div>
+        
+                <!-- Force Platforms -->
+                <div class="bg-gray-50 p-4 rounded-lg border">
+                    <img src="your-image-url.jpg" alt="Force Platforms" class="w-full h-40 object-cover rounded-lg">
+                    <h4 class="text-lg font-semibold text-gray-900 mt-3">Force Platforms</h4>
+                    <p class="text-gray-600 text-sm mt-1">
+                        Measure ground reaction forces for jump and gait analysis.
+                    </p>
+                    <button onclick="openModal('Force Platforms')" class="text-blue-600 font-medium mt-3 inline-block">Request Info →</button>
+                </div>
+        
+                <!-- Video Analysis Software -->
+                <div class="bg-gray-50 p-4 rounded-lg border">
+                    <img src="your-image-url.jpg" alt="Video Analysis Software" class="w-full h-40 object-cover rounded-lg">
+                    <h4 class="text-lg font-semibold text-gray-900 flex items-center mt-3">
+                        Video Analysis Software
+                        <span class="bg-blue-700 text-white text-xs font-bold ml-2 px-2 py-1 rounded">Bestseller</span>
+                    </h4>
+                    <p class="text-gray-600 text-sm mt-1">
+                        Professional software for frame-by-frame movement analysis.
+                    </p>
+                    <button onclick="openModal('Video Analysis Software')" class="text-blue-600 font-medium mt-3 inline-block">Request Info →</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal -->
+        <div id="infoModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+            <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+                <h2 class="text-xl font-semibold text-blue-900">Request Info</h2>
+                <p class="text-gray-600 text-sm mt-1">Fill out the form below to request more details.</p>
+                <form class="mt-4">
+                    <label class="block text-gray-700 text-sm font-medium">Product Name</label>
+                    <input id="productName" type="text" class="w-full p-2 border rounded mt-1 bg-gray-100" readonly>
+        
+                    <label class="block text-gray-700 text-sm font-medium mt-3">Your Name</label>
+                    <input type="text" class="w-full p-2 border rounded mt-1" placeholder="Enter your name">
+        
+                    <label class="block text-gray-700 text-sm font-medium mt-3">Email</label>
+                    <input type="email" class="w-full p-2 border rounded mt-1" placeholder="Enter your email">
+        
+                    <label class="block text-gray-700 text-sm font-medium mt-3">Message</label>
+                    <textarea class="w-full p-2 border rounded mt-1" placeholder="Your message"></textarea>
+        
+                    <div class="mt-4 flex justify-end">
+                        <button type="button" onclick="closeModal()" class="bg-gray-300 text-gray-700 px-4 py-2 rounded mr-2">Cancel</button>
+                        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <script>
+            function openModal(product) {
+                document.getElementById('productName').value = product;
+                document.getElementById('infoModal').classList.remove('hidden');
+            }
+        
+            function closeModal() {
+                document.getElementById('infoModal').classList.add('hidden');
+            }
+        </script>
+        
+        
+    </div>
+</section>
+
+<div class="bg-black text-white py-16 text-center">
+    <h2 class="text-3xl font-bold">Need Custom Equipment Solutions?</h2>
+    <p class="text-lg mt-2">We specialize in designing custom solutions tailored to the specific needs of your institution or organization.</p>
+    <button class="mt-6 bg-yellow-500 text-black font-bold px-6 py-3 rounded-lg shadow-md hover:bg-yellow-400">
+        Contact Our Business Team
+    </button>
+</div>
+
+
+
+
+{% endblock %}

@@ -1,213 +1,573 @@
 {% extends "base.html" %}
 {% load static %}
 
+
 {% block content %}
 
 
-    <!-- Your content here -->
 
-  
-  
+
+   <!-- Your content here -->
+
 <!-- Sports Menu (Hidden on Small Screens) -->
 <div class="bg-stone-950 text-white font-bold hidden md:flex">
-    <div class="max-w-7xl mx-auto flex justify-center w-full">
-      <a href="#" class="hover:bg-sky-700 flex-1 text-center py-3">FOOTBALL</a>
-      <a href="#" class="hover:bg-sky-700 flex-1 text-center py-3">CRICKET</a>
-      <a href="#" class="hover:bg-sky-700 flex-1 text-center py-3">TENNIS</a>
-      <a href="#" class="hover:bg-sky-700 flex-1 text-center py-3">GOLF</a>
-      <a href="#" class="hover:bg-sky-700 flex-1 text-center py-3">RUGBY</a>
-      <a href="#" class="hover:bg-sky-700 flex-1 text-center py-3">GYM & FITNESS</a>
-      
-      <!-- SALE button stays small and centered -->
-      <a href="#" class="bg-red-600 text-center px-4 py-2 rounded my-1">SALE</a>
-  
-      <a href="#" class="hover:bg-sky-700 flex-1 text-center py-3">ALL SPORTS</a>
-    </div>
-  </div>
-  
-  
-  
+    <div class="mx-10 flex w-full items-center">
+       <!-- Left-aligned sports categories -->
+       <div class="flex">
+          <a href="#" class="hover:bg-gray-600 px-4 text-center py-3">FOOTBALL</a>
+          <a href="#" class="hover:bg-gray-600 px-4 text-center py-3">CRICKET</a>
+          <a href="#" class="hover:bg-gray-600 px-4 text-center py-3">TENNIS</a>
+          <a href="#" class="hover:bg-gray-600 px-4 text-center py-3">GOLF</a>
+          <a href="#" class="hover:bg-gray-600 px-4 text-center py-3">RUGBY</a>
+          <a href="#" class="hover:bg-gray-600 px-4 text-center py-3">GYM & FITNESS</a>
+          <a href="#" class="hover:bg-gray-600 px-4 text-center py-3">ALL SPORTS</a>
+       </div>
 
-  
-
-<!-- Hero here -->
-  <div
-  class="hero min-h-[65vh]"
-  style="background-image: url(https://images.unsplash.com/vector-1738303238864-f8fb0e6d55ea?q=80&w=3520&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
-  <div class="hero-overlay"></div>
-  <div class="hero-content text-neutral-content text-center">
-    <div class="max-w-md">
-      <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
-      <p class="mb-5">
-        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-        quasi. In deleniti eaque aut repudiandae et a id nisi.
-      </p>
-      <button class="btn btn-secondary">Get Started</button>
+       <!-- Download button on the right -->
+       <div class="ml-auto flex items-center">
+          <a href="document.pdf" download class="bg-green-600 text-white flex items-center gap-2 px-6 py-2 rounded-md hover:bg-green-700 transition">
+             <!-- SVG Icon -->
+             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+             </svg>
+             Download Brochure
+          </a>
+       </div>
     </div>
-  </div>
 </div>
 
 
 
-<!-- Features Section -->
+ 
+ 
 
-<div class="max-w-7xl mx-auto px-4 my-8 flex items-center gap-8">
-    <!-- Left Section (Title & Description) -->
-    <div class="w-1/3">
-      <h2 class="text-3xl font-bold text-gray-800">Our Featured Products</h2>
-      <p class="mt-2 text-gray-600">Discover our latest and most popular products, carefully curated for you.</p>
+
+
+
+<!-- Hero here -->
+<div class="hero min-h-[65vh] relative overflow-hidden">
+    <!-- Background Video -->
+    <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline>
+        <source src="https://videos.pexels.com/video-files/6390166/6390166-sd_640_360_25fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+    <!-- Content -->
+    <div class="hero-content text-neutral-content text-center relative z-10">
+        <div class="max-w-md">
+            <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+            <p class="mb-5">
+                Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                quasi. In deleniti eaque aut repudiandae et a id nisi.
+            </p>
+            <button class="btn btn-secondary">Get Started</button>
+        </div>
     </div>
+</div> 
+
+
   
+
+
+
+
+
+
+<!-- Features Section -->
+<section class="bg-gray-100 py-2 w-full">
+
+<div class="max-w-7xl mx-auto px-4 mt-8 flex items-center gap-8">
+   <!-- Left Section (Title & Description) -->
+   <div class="w-1/3">
+     <h2 class="text-3xl font-bold text-gray-800">Our Featured Products</h2>
+     <p class="mt-2 text-gray-600">Discover our latest and most popular products, carefully curated for you.</p>
+   </div>
     <!-- Right Section (Carousel) -->
-    <div class="w-2/3">
-      <div class="carousel rounded-box space-x-4">
-        <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
-          <img class="h-40 w-full rounded-lg" src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" alt="Image 1" />
+   <div class="w-2/3">
+     <div class="carousel rounded-box space-x-4">
+       <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
+         <img class="h-40 w-full rounded-lg" src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" alt="Image 1" />
+       </div>
+       <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
+         <img class="h-40 w-full rounded-lg" src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp" alt="Image 2" />
+       </div>
+       <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
+         <img class="h-40 w-full rounded-lg" src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp" alt="Image 3" />
+       </div>
+       <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
+         <img class="h-40 w-full rounded-lg" src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp" alt="Image 4" />
+       </div>
+       <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
+         <img class="h-40 w-full rounded-lg" src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp" alt="Image 5" />
+       </div>
+     </div>
+   </div>
+ </div>
+
+
+ <section class="py-6 text-center">
+    <h2 class="text-3xl font-bold text-black mb-8">Why We Are the Best?</h2>
+
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32" width="40" viewBox="0 0 640 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M272.2 64.6l-51.1 51.1c-15.3 4.2-29.5 11.9-41.5 22.5L153 161.9C142.8 171 129.5 176 115.8 176L96 176l0 128c20.4 .6 39.8 8.9 54.3 23.4l35.6 35.6 7 7c0 0 0 0 0 0L219.9 397c6.2 6.2 16.4 6.2 22.6 0c1.7-1.7 3-3.7 3.7-5.8c2.8-7.7 9.3-13.5 17.3-15.3s16.4 .6 22.2 6.5L296.5 393c11.6 11.6 30.4 11.6 41.9 0c5.4-5.4 8.3-12.3 8.6-19.4c.4-8.8 5.6-16.6 13.6-20.4s17.3-3 24.4 2.1c9.4 6.7 22.5 5.8 30.9-2.6c9.4-9.4 9.4-24.6 0-33.9L340.1 243l-35.8 33c-27.3 25.2-69.2 25.6-97 .9c-31.7-28.2-32.4-77.4-1.6-106.5l70.1-66.2C303.2 78.4 339.4 64 377.1 64c36.1 0 71 13.3 97.9 37.2L505.1 128l38.9 0 40 0 40 0c8.8 0 16 7.2 16 16l0 208c0 17.7-14.3 32-32 32l-32 0c-11.8 0-22.2-6.4-27.7-16l-84.9 0c-3.4 6.7-7.9 13.1-13.5 18.7c-17.1 17.1-40.8 23.8-63 20.1c-3.6 7.3-8.5 14.1-14.6 20.2c-27.3 27.3-70 30-100.4 8.1c-25.1 20.8-62.5 19.5-86-4.1L159 404l-7-7-35.6-35.6c-5.5-5.5-12.7-8.7-20.4-9.3C96 369.7 81.6 384 64 384l-32 0c-17.7 0-32-14.3-32-32L0 144c0-8.8 7.2-16 16-16l40 0 40 0 19.8 0c2 0 3.9-.7 5.3-2l26.5-23.6C175.5 77.7 211.4 64 248.7 64L259 64c4.4 0 8.9 .2 13.2 .6zM544 320l0-144-48 0c-5.9 0-11.6-2.2-15.9-6.1l-36.9-32.8c-18.2-16.2-41.7-25.1-66.1-25.1c-25.4 0-49.8 9.7-68.3 27.1l-70.1 66.2c-10.3 9.8-10.1 26.3 .5 35.7c9.3 8.3 23.4 8.1 32.5-.3l71.9-66.4c9.7-9 24.9-8.4 33.9 1.4s8.4 24.9-1.4 33.9l-.8 .8 74.4 74.4c10 10 16.5 22.3 19.4 35.1l74.8 0zM64 336a16 16 0 1 0 -32 0 16 16 0 1 0 32 0zm528 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32z"/></svg>            <h3 class="text-xl font-bold text-black mt-2">Trusted Partnerships</h3>
+            <p class="text-gray-400 mt-2">
+                Partnering with leading sports institutes across the nation.
+            </p>
         </div>
-        <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
-          <img class="h-40 w-full rounded-lg" src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp" alt="Image 2" />
+
+        <!-- Card 2 -->
+        <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M4.1 38.2C1.4 34.2 0 29.4 0 24.6C0 11 11 0 24.6 0L133.9 0c11.2 0 21.7 5.9 27.4 15.5l68.5 114.1c-48.2 6.1-91.3 28.6-123.4 61.9L4.1 38.2zm503.7 0L405.6 191.5c-32.1-33.3-75.2-55.8-123.4-61.9L350.7 15.5C356.5 5.9 366.9 0 378.1 0L487.4 0C501 0 512 11 512 24.6c0 4.8-1.4 9.6-4.1 13.6zM80 336a176 176 0 1 1 352 0A176 176 0 1 1 80 336zm184.4-94.9c-3.4-7-13.3-7-16.8 0l-22.4 45.4c-1.4 2.8-4 4.7-7 5.1L168 298.9c-7.7 1.1-10.7 10.5-5.2 16l36.3 35.4c2.2 2.2 3.2 5.2 2.7 8.3l-8.6 49.9c-1.3 7.6 6.7 13.5 13.6 9.9l44.8-23.6c2.7-1.4 6-1.4 8.7 0l44.8 23.6c6.9 3.6 14.9-2.2 13.6-9.9l-8.6-49.9c-.5-3 .5-6.1 2.7-8.3l36.3-35.4c5.6-5.4 2.5-14.8-5.2-16l-50.1-7.3c-3-.4-5.7-2.4-7-5.1l-22.4-45.4z"/></svg>
+                                    <h3 class="text-xl font-bold text-black mt-2">Government Approved</h3>
+            <p class="text-gray-400 mt-2">
+                Proud supplier to government sports institutions nationwide.
+            </p>
         </div>
-        <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
-          <img class="h-40 w-full rounded-lg" src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp" alt="Image 3" />
+
+        <!-- Card 3 -->
+        <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32" width="40" viewBox="0 0 640 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M184 48l144 0c4.4 0 8 3.6 8 8l0 40L176 96l0-40c0-4.4 3.6-8 8-8zm-56 8l0 40L64 96C28.7 96 0 124.7 0 160l0 96 192 0 160 0 8.2 0c32.3-39.1 81.1-64 135.8-64c5.4 0 10.7 .2 16 .7l0-32.7c0-35.3-28.7-64-64-64l-64 0 0-40c0-30.9-25.1-56-56-56L184 0c-30.9 0-56 25.1-56 56zM320 352l-96 0c-17.7 0-32-14.3-32-32l0-32L0 288 0 416c0 35.3 28.7 64 64 64l296.2 0C335.1 449.6 320 410.5 320 368c0-5.4 .2-10.7 .7-16l-.7 0zm320 16a144 144 0 1 0 -288 0 144 144 0 1 0 288 0zM496 288c8.8 0 16 7.2 16 16l0 48 32 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-64c0-8.8 7.2-16 16-16z"/></svg>
+            <h3 class="text-xl font-bold text-black mt-2">Business Focused</h3>
+            <p class="text-gray-400 mt-2">
+                Creating valuable B2B connections to expand sports infrastructure in India.
+            </p>
         </div>
-        <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
-          <img class="h-40 w-full rounded-lg" src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp" alt="Image 4" />
-        </div>
-        <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
-          <img class="h-40 w-full rounded-lg" src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp" alt="Image 5" />
-        </div>
-      </div>
     </div>
-  </div>
-  
+</section>
+
+</section>
+
 
 <!-- Product Container with "View All" Button -->
 <div class="max-w-7xl mx-auto px-4 py-10 relative">
-    <div class="flex justify-between items-center mb-6">
-      <h2 class="text-2xl font-bold">Featured Products</h2>
-      <div class="flex gap-4">
-        <button id="prev" class="text-gray-500 hover:text-black transition">
-          ←
-        </button>
-        <button id="next" class="text-gray-500 hover:text-black transition">
-          →
-        </button>
-      </div>
-    </div>
-  
+   <div class="flex justify-between items-center mb-6">
+     <h2 class="text-2xl font-bold">Featured Products</h2>
+     <div class="flex gap-4">
+       <button id="prev" class="text-gray-500 hover:text-black transition">
+         ←
+       </button>
+       <button id="next" class="text-gray-500 hover:text-black transition">
+         →
+       </button>
+     </div>
+   </div>
     <!-- Product Carousel -->
-    <div class="overflow-hidden relative">
-      <div id="carousel" class="flex gap-6 transition-transform duration-500">
-        
-        <!-- Product Cards -->
-        <div class="relative group overflow-hidden rounded-lg shadow-lg min-w-[250px]" data-aos="fade-up">
-          <img src="https://source.unsplash.com/400x300/?shoes" alt="Product" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
-          <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <h3 class="text-white text-lg font-semibold">Running Shoes</h3>
-            <p class="text-white text-sm mt-2">$49.99</p>
-          </div>
-        </div>
-  
+   <div class="overflow-hidden relative">
+     <div id="carousel" class="flex gap-6 transition-transform duration-500">
+      
+       <!-- Product Cards -->
+       <div class="relative group overflow-hidden rounded-lg shadow-lg min-w-[250px]" data-aos="fade-up">
+         <img src="https://source.unsplash.com/400x300/?shoes" alt="Product" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
+         <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+           <h3 class="text-white text-lg font-semibold">Running Shoes</h3>
+           <p class="text-white text-sm mt-2">$49.99</p>
+         </div>
+       </div>
         <div class="relative group overflow-hidden rounded-lg shadow-lg min-w-[250px]" data-aos="fade-up" data-aos-delay="100">
-          <img src="https://source.unsplash.com/400x300/?watch" alt="Product" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
-          <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <h3 class="text-white text-lg font-semibold">Luxury Watch</h3>
-            <p class="text-white text-sm mt-2">$199.99</p>
-          </div>
-        </div>
-  
+         <img src="https://source.unsplash.com/400x300/?watch" alt="Product" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
+         <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+           <h3 class="text-white text-lg font-semibold">Luxury Watch</h3>
+           <p class="text-white text-sm mt-2">$199.99</p>
+         </div>
+       </div>
         <div class="relative group overflow-hidden rounded-lg shadow-lg min-w-[250px]" data-aos="fade-up" data-aos-delay="200">
-          <img src="https://source.unsplash.com/400x300/?headphones" alt="Product" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
-          <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <h3 class="text-white text-lg font-semibold">Wireless Headphones</h3>
-            <p class="text-white text-sm mt-2">$99.99</p>
-          </div>
-        </div>
-  
+         <img src="https://source.unsplash.com/400x300/?headphones" alt="Product" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
+         <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+           <h3 class="text-white text-lg font-semibold">Wireless Headphones</h3>
+           <p class="text-white text-sm mt-2">$99.99</p>
+         </div>
+       </div>
         <div class="relative group overflow-hidden rounded-lg shadow-lg min-w-[250px]" data-aos="fade-up" data-aos-delay="300">
-          <img src="https://source.unsplash.com/400x300/?backpack" alt="Product" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
-          <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <h3 class="text-white text-lg font-semibold">Travel Backpack</h3>
-            <p class="text-white text-sm mt-2">$79.99</p>
-          </div>
-        </div>
-  
+         <img src="https://source.unsplash.com/400x300/?backpack" alt="Product" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
+         <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+           <h3 class="text-white text-lg font-semibold">Travel Backpack</h3>
+           <p class="text-white text-sm mt-2">$79.99</p>
+         </div>
+       </div>
         <div class="relative group overflow-hidden rounded-lg shadow-lg min-w-[250px]" data-aos="fade-up" data-aos-delay="400">
-          <img src="https://source.unsplash.com/400x300/?smartphone" alt="Product" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
-          <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <h3 class="text-white text-lg font-semibold">Smartphone</h3>
-            <p class="text-white text-sm mt-2">$699.99</p>
-          </div>
-        </div>
-  
+         <img src="https://source.unsplash.com/400x300/?smartphone" alt="Product" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
+         <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+           <h3 class="text-white text-lg font-semibold">Smartphone</h3>
+           <p class="text-white text-sm mt-2">$699.99</p>
+         </div>
+       </div>
         <div class="relative group overflow-hidden rounded-lg shadow-lg min-w-[250px]" data-aos="fade-up" data-aos-delay="500">
-          <img src="https://source.unsplash.com/400x300/?camera" alt="Product" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
-          <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <h3 class="text-white text-lg font-semibold">Digital Camera</h3>
-            <p class="text-white text-sm mt-2">$499.99</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+         <img src="https://source.unsplash.com/400x300/?camera" alt="Product" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
+         <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+           <h3 class="text-white text-lg font-semibold">Digital Camera</h3>
+           <p class="text-white text-sm mt-2">$499.99</p>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
 
-  <!-- <section class="bg-stone-950 text-white py-16"> -->
-    <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center gap-12 bg-stone-950 text-white rounded-lg shadow-lg">
-        <!-- Left Side - Image -->
-        <div class="md:w-5/12 relative" data-aos="fade-right">
-          <img src="/your-image-path.jpg" alt="About Us" class="w-full rounded-lg shadow-lg object-cover">
-        </div>
-      
-        <!-- Right Side - Text -->
-        <div class="md:w-7/12 text-left" data-aos="fade-left">
-          <h2 class="text-3xl md:text-4xl font-bold mb-6">About Us</h2>
-          <p class="text-gray-300 text-lg leading-relaxed">
-            We are more than just a brand – we are a movement, built on passion, precision, and performance. 
-            At <span class="text-sky-400 font-semibold">Aarogyaa Bharat</span>, we believe in innovation, quality, and pushing limits. 
-          </p>
-          <p class="text-gray-300 mt-4 text-lg leading-relaxed">
-            Whether it’s cutting-edge products, customer-first service, or redefining industry standards, 
-            we are committed to making an impact. Let’s build something extraordinary together.  
-          </p>
-          <a href="#contact" class="inline-block mt-6 bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-lg shadow-lg font-semibold transition-all duration-300">Get in Touch</a>
-        </div>
-      </div>
-      
-      <!-- AOS Animation -->
-      <script>
-        AOS.init({ duration: 800, once: true });
-      </script>
-      
+
+ <div class="relative w-full h-[80vh] bg-cover bg-center flex items-center justify-start px-16"
+      style="background-image: url('https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp');">
   
-  
-  <!-- Initialize AOS for Smooth Scroll Animation -->
+   <!-- Dark Overlay -->
+   <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+
+   <!-- Text Content -->
+   <div class="relative z-10 max-w-lg text-white text-left pl-24 opacity-0"
+        data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
+     <h1 class="text-6xl font-bold">BK-24</h1>
+     <h2 class="text-2xl mt-2">PULMONARY FUNCTION TESTING</h2>
+     <p class="mt-4 text-lg">
+       Innovative modularity and networking for truly customised PFT solutions...
+     </p>
+
+
+     <!-- Button -->
+     <button class="mt-6 px-6 py-3 bg-white text-black font-semibold rounded-lg shadow-md hover:bg-gray-200 transition">
+       Learn More →
+     </button>
+   </div>
+ </div>
+
+
+
+
+<!-- Stats Box -->
+<section class="bg-gray-100 py-8 w-full">
+<div class="max-w-7xl mx-auto px-4 flex flex-col items-center text-gray-900 p-10">
+    <h2 class="text-4xl font-bold text-center mb-6">Our Business in Numbers</h2>
+    <p class="text-gray-600 text-center mb-10">See how we are growing and impacting the industry.</p>
+
+    <!-- Stats Cards -->
+    <div class="flex flex-wrap justify-center gap-6 w-full">
+        <!-- Stat Card 1 -->
+        <div class="bg-white p-6 rounded-2xl text-center shadow-lg flex-1 min-w-[150px] sm:min-w-[180px] md:min-w-[200px] lg:min-w-[250px]">
+            <h3 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600 counter" data-count="1000">0</h3>
+            <p class="text-gray-700 text-base sm:text-lg mt-2">Happy Customers</p>
+        </div>
+
+        <!-- Stat Card 2 -->
+        <div class="bg-white p-6 rounded-2xl text-center shadow-lg flex-1 min-w-[150px] sm:min-w-[180px] md:min-w-[200px] lg:min-w-[250px]">
+            <h3 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600 counter" data-count="500">0</h3>
+            <p class="text-gray-700 text-base sm:text-lg mt-2">Products Sold</p>
+        </div>
+
+        <!-- Stat Card 3 -->
+        <div class="bg-white p-6 rounded-2xl text-center shadow-lg flex-1 min-w-[150px] sm:min-w-[180px] md:min-w-[200px] lg:min-w-[250px]">
+            <h3 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600 counter" data-count="120">0</h3>
+            <p class="text-gray-700 text-base sm:text-lg mt-2">Business Partners</p>
+        </div>
+
+        <!-- Stat Card 4 -->
+        <div class="bg-white p-6 rounded-2xl text-center shadow-lg flex-1 min-w-[150px] sm:min-w-[180px] md:min-w-[200px] lg:min-w-[250px]">
+            <h3 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600 counter" data-count="50">0</h3>
+            <p class="text-gray-700 text-base sm:text-lg mt-2">Countries Reached</p>
+        </div>
+    </div>
+</div>
+</section>
+
+
+
+<section class="bg-white py-16">
+    <div class="max-w-7xl mx-auto text-center px-6">
+        <!-- Section Heading -->
+        <div class="mb-10">
+            <div class="text-blue-600 text-4xl mb-4">🏅</div>
+            <h2 class="text-3xl font-bold text-black">Our Proud Partnerships</h2>
+            <p class="text-gray-600 mt-2">
+                Trusted by leading government sports institutes and organizations across India for delivering premium sports science equipment.
+            </p>
+        </div>
+
+        <!-- Partnership Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                <p class="italic text-gray-600">
+                    "KridaShastra has been an invaluable partner in setting up our state-of-the-art training facilities across multiple centers."
+                </p>
+                <h3 class="text-lg font-bold text-black mt-4">Sports Authority of India</h3>
+                <p class="text-gray-500 text-sm">Government Institute</p>
+            </div>
+
+            <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                <p class="italic text-gray-600">
+                    "The quality and reliability of KridaShastra's equipment have significantly enhanced our athlete training and research capabilities."
+                </p>
+                <h3 class="text-lg font-bold text-black mt-4">National Institute of Sports</h3>
+                <p class="text-gray-500 text-sm">Government Training Center</p>
+            </div>
+
+            <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                <p class="italic text-gray-600">
+                    "KridaShastra's professional approach and top-tier equipment have been crucial in our preparation for international competitions."
+                </p>
+                <h3 class="text-lg font-bold text-black mt-4">Indian Olympic Association</h3>
+                <p class="text-gray-500 text-sm">Sports Governing Body</p>
+            </div>
+
+            <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                <p class="italic text-gray-600">
+                    "Our sports science laboratories powered by KridaShastra equipment provide our students with industry-leading training experience."
+                </p>
+                <h3 class="text-lg font-bold text-black mt-4">Lakshmibai National College of Physical Education</h3>
+                <p class="text-gray-500 text-sm">Educational Institute</p>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="bg-gray-200 mt-12 p-8 rounded-lg text-center">
+            <h3 class="text-2xl font-bold text-black">Join Our Growing Network of Partners</h3>
+            <p class="text-gray-600 mt-2">
+                We're proud to serve over 50+ government and private sports institutions across 15 states in India.
+            </p>
+            <a href="#" class="text-blue-600 font-bold mt-4 inline-block">See all our partners →</a>
+        </div>
+    </div>
+</section>
+
+
+<section class="bg-black py-16">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <!-- Left Side -->
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" height="32" width="40" viewBox="0 0 640 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#eab309" d="M416 176c0 97.2-93.1 176-208 176c-38.2 0-73.9-8.7-104.7-23.9c-7.5 4-16 7.9-25.2 11.4C59.8 346.4 37.8 352 16 352c-6.9 0-13.1-4.5-15.2-11.1s.2-13.8 5.8-17.9c0 0 0 0 0 0s0 0 0 0l.2-.2c.2-.2 .6-.4 1.1-.8c1-.8 2.5-2 4.3-3.7c3.6-3.3 8.5-8.1 13.3-14.3c5.5-7 10.7-15.4 14.2-24.7C14.7 250.3 0 214.6 0 176C0 78.8 93.1 0 208 0S416 78.8 416 176zM231.5 383C348.9 372.9 448 288.3 448 176c0-5.2-.2-10.4-.6-15.5C555.1 167.1 640 243.2 640 336c0 38.6-14.7 74.3-39.6 103.4c3.5 9.4 8.7 17.7 14.2 24.7c4.8 6.2 9.7 11 13.3 14.3c1.8 1.6 3.3 2.9 4.3 3.7c.5 .4 .9 .7 1.1 .8l.2 .2s0 0 0 0s0 0 0 0c5.6 4.1 7.9 11.3 5.8 17.9c-2.1 6.6-8.3 11.1-15.2 11.1c-21.8 0-43.8-5.6-62.1-12.5c-9.2-3.5-17.8-7.4-25.2-11.4C505.9 503.3 470.2 512 432 512c-95.6 0-176.2-54.6-200.5-129zM228 72c0-11-9-20-20-20s-20 9-20 20l0 14c-7.6 1.7-15.2 4.4-22.2 8.5c-13.9 8.3-25.9 22.8-25.8 43.9c.1 20.3 12 33.1 24.7 40.7c11 6.6 24.7 10.8 35.6 14l1.7 .5c12.6 3.8 21.8 6.8 28 10.7c5.1 3.2 5.8 5.4 5.9 8.2c.1 5-1.8 8-5.9 10.5c-5 3.1-12.9 5-21.4 4.7c-11.1-.4-21.5-3.9-35.1-8.5c-2.3-.8-4.7-1.6-7.2-2.4c-10.5-3.5-21.8 2.2-25.3 12.6s2.2 21.8 12.6 25.3c1.9 .6 4 1.3 6.1 2.1c0 0 0 0 0 0s0 0 0 0c8.3 2.9 17.9 6.2 28.2 8.4l0 14.6c0 11 9 20 20 20s20-9 20-20l0-13.8c8-1.7 16-4.5 23.2-9c14.3-8.9 25.1-24.1 24.8-45c-.3-20.3-11.7-33.4-24.6-41.6c-11.5-7.2-25.9-11.6-37.1-15l-.7-.2c-12.8-3.9-21.9-6.7-28.3-10.5c-5.2-3.1-5.3-4.9-5.3-6.7c0-3.7 1.4-6.5 6.2-9.3c5.4-3.2 13.6-5.1 21.5-5c9.6 .1 20.2 2.2 31.2 5.2c10.7 2.8 21.6-3.5 24.5-14.2s-3.5-21.6-14.2-24.5c-6.5-1.7-13.7-3.4-21.1-4.7L228 72z"/></svg>
+            <h2 class="text-3xl font-bold text-white pt-5">
+                Let's Build a Successful Business Partnership
+            </h2>
+            <p class="text-gray-300 mt-4">
+                Join forces with KridaShastra to enhance sports infrastructure across India. We provide premium equipment tailored to your institution's needs.
+            </p>
+            <ul class="mt-6 space-y-2 text-gray-300">
+                <li>✔ Access to premium sports science equipment</li>
+                <li>✔ Customized solutions for your institution</li>
+                <li>✔ Technical support and training</li>
+                <li>✔ Preferential pricing for long-term partners</li>
+                <li>✔ Joint research and development opportunities</li>
+            </ul>
+            <button class="mt-6 bg-yellow-500 text-black font-bold px-6 py-3 rounded-lg shadow-md hover:bg-yellow-400">
+                Contact For Business Inquiry
+            </button>
+        </div>
+
+        <!-- Right Side (Why Partner?) -->
+        <div class="bg-gray-900 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-white">
+                Why Partner With KridaShastra?
+            </h3>
+            <div class="mt-4">
+                <h4 class="text-lg font-bold text-yellow-500">Experience & Expertise</h4>
+                <p class="text-gray-300">
+                    With over 12 years in the sports equipment industry, we understand the specific needs of Indian sports institutions.
+                </p>
+            </div>
+            <div class="mt-4">
+                <h4 class="text-lg font-bold text-yellow-500">Government Approved</h4>
+                <p class="text-gray-300">
+                    We are a trusted supplier for numerous government sports bodies and educational institutions.
+                </p>
+            </div>
+            <div class="mt-4">
+                <h4 class="text-lg font-bold text-yellow-500">End-to-End Solutions</h4>
+                <p class="text-gray-300">
+                    From consultation and planning to installation and training, we provide complete support.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Product Grid Section with Proper Mobile Margin
+<div class="grid grid-cols-3 gap-3 max-w-7xl mx-auto px-4 mb-10">
+    <!-- Product Card -->
+    <!-- <div class="relative group overflow-hidden shadow-lg">
+        <img src="https://via.placeholder.com/300" alt="Product" class="w-full h-auto">
+        <div class="absolute inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 text-white text-center">
+            <h3 class="text-lg font-bold">Product Name</h3>
+            <p class="text-sm mt-2">Short description of the product.</p>
+            <span class="mt-3 font-semibold text-yellow-400">$99.99</span>
+        </div>
+    </div>
+    <div class="relative group overflow-hidden shadow-lg">
+        <img src="https://via.placeholder.com/300" alt="Product" class="w-full h-auto">
+        <div class="absolute inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 text-white text-center">
+            <h3 class="text-lg font-bold">Product Name</h3>
+            <p class="text-sm mt-2">Short description of the product.</p>
+            <span class="mt-3 font-semibold text-yellow-400">$99.99</span>
+        </div>
+    </div>
+
+    <div class="relative group overflow-hidden shadow-lg">
+        <img src="https://via.placeholder.com/300" alt="Product" class="w-full h-auto">
+        <div class="absolute inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 text-white text-center">
+            <h3 class="text-lg font-bold">Product Name</h3>
+            <p class="text-sm mt-2">Short description of the product.</p>
+            <span class="mt-3 font-semibold text-yellow-400">$99.99</span>
+        </div>
+    </div>
+
+    <div class="relative group overflow-hidden shadow-lg">
+        <img src="https://via.placeholder.com/300" alt="Product" class="w-full h-auto">
+        <div class="absolute inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 text-white text-center">
+            <h3 class="text-lg font-bold">Product Name</h3>
+            <p class="text-sm mt-2">Short description of the product.</p>
+            <span class="mt-3 font-semibold text-yellow-400">$99.99</span>
+        </div>
+    </div>
+
+    <div class="relative group overflow-hidden shadow-lg">
+        <img src="https://via.placeholder.com/300" alt="Product" class="w-full h-auto">
+        <div class="absolute inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 text-white text-center">
+            <h3 class="text-lg font-bold">Product Name</h3>
+            <p class="text-sm mt-2">Short description of the product.</p>
+            <span class="mt-3 font-semibold text-yellow-400">$99.99</span>
+        </div>
+    </div>
+
+    <div class="relative group overflow-hidden shadow-lg">
+        <img src="https://via.placeholder.com/300" alt="Product" class="w-full h-auto">
+        <div class="absolute inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 text-white text-center">
+            <h3 class="text-lg font-bold">Product Name</h3>
+            <p class="text-sm mt-2">Short description of the product.</p>
+            <span class="mt-3 font-semibold text-yellow-400">$99.99</span>
+        </div>
+    </div>
+
+    <div class="relative group overflow-hidden shadow-lg">
+        <img src="https://via.placeholder.com/300" alt="Product" class="w-full h-auto">
+        <div class="absolute inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 text-white text-center">
+            <h3 class="text-lg font-bold">Product Name</h3>
+            <p class="text-sm mt-2">Short description of the product.</p>
+            <span class="mt-3 font-semibold text-yellow-400">$99.99</span>
+        </div>
+    </div>
+
+    <div class="relative group overflow-hidden shadow-lg">
+        <img src="https://via.placeholder.com/300" alt="Product" class="w-full h-auto">
+        <div class="absolute inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 text-white text-center">
+            <h3 class="text-lg font-bold">Product Name</h3>
+            <p class="text-sm mt-2">Short description of the product.</p>
+            <span class="mt-3 font-semibold text-yellow-400">$99.99</span>
+        </div>
+    </div>
+    <div class="relative group overflow-hidden shadow-lg">
+        <img src="https://via.placeholder.com/300" alt="Product" class="w-full h-auto">
+        <div class="absolute inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 text-white text-center">
+            <h3 class="text-lg font-bold">Product Name</h3>
+            <p class="text-sm mt-2">Short description of the product.</p>
+            <span class="mt-3 font-semibold text-yellow-400">$99.99</span>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+
+
+
+
+  <!-- JavaScript for Counter Animation -->
   <script>
-    AOS.init({ duration: 800, once: true });
+    document.addEventListener("DOMContentLoaded", function () {
+      const counters = document.querySelectorAll(".counter");
   
-    // Carousel Functionality
-    const carousel = document.getElementById("carousel");
-    const prevButton = document.getElementById("prev");
-    const nextButton = document.getElementById("next");
+      const startCounter = (counter) => {
+        let count = 0;
+        const updateCount = () => {
+          const target = +counter.getAttribute("data-count");
+          const increment = target / 100;
+          count += increment;
+          if (count < target) {
+            counter.innerText = Math.ceil(count);
+            requestAnimationFrame(updateCount);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        updateCount();
+      };
   
-    let scrollAmount = 0;
-    const cardWidth = 270; // Width of each product card + margin
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              startCounter(entry.target);
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
   
-    nextButton.addEventListener("click", () => {
-      if (scrollAmount < carousel.scrollWidth - carousel.clientWidth) {
-        scrollAmount += cardWidth;
-        carousel.style.transform = `translateX(-${scrollAmount}px)`;
-      }
-    });
-  
-    prevButton.addEventListener("click", () => {
-      if (scrollAmount > 0) {
-        scrollAmount -= cardWidth;
-        carousel.style.transform = `translateX(-${scrollAmount}px)`;
-      }
+      counters.forEach((counter) => observer.observe(counter));
     });
   </script>
   
-  
 
-  
-{% endblock %}
+
+ <!-- AOS Library -->
+ <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ <script>
+   AOS.init({
+     startEvent: 'DOMContentLoaded',  // Ensures AOS runs only after full load
+     disable: false, // Do not disable on any device
+     duration: 1000, // Animation duration
+     once: true, // Only animate once
+     anchorPlacement: 'top-bottom' // Trigger when scrolled into view
+   });
+
+
+   // Prevent auto-scroll behavior
+   window.onload = function () {
+       setTimeout(() => {
+           window.scrollTo(0, 0);
+       }, 0);
+   };
+ </script>
+
+
+
+
+
+
+ 
+ 
+    
+     <!-- AOS Animation -->
+     <script>
+       AOS.init({ duration: 800, once: true });
+     </script>
+    
+ 
+ <!-- Initialize AOS for Smooth Scroll Animation -->
+ <script>
+   AOS.init({ duration: 800, once: true });
+    // Carousel Functionality
+   const carousel = document.getElementById("carousel");
+   const prevButton = document.getElementById("prev");
+   const nextButton = document.getElementById("next");
+    let scrollAmount = 0;
+   const cardWidth = 270; // Width of each product card + margin
+    nextButton.addEventListener("click", () => {
+     if (scrollAmount < carousel.scrollWidth - carousel.clientWidth) {
+       scrollAmount += cardWidth;
+       carousel.style.transform = `translateX(-${scrollAmount}px)`;
+     }
+   });
+    prevButton.addEventListener("click", () => {
+     if (scrollAmount > 0) {
+       scrollAmount -= cardWidth;
+       carousel.style.transform = `translateX(-${scrollAmount}px)`;
+     }
+   });
+ </script>
+ 
+
+
+ {% endblock %}
