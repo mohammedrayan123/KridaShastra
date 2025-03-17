@@ -34,7 +34,7 @@ urlpatterns = [
     path('products/', views.products, name='products'),
     
     # Insights Page
-    path('insights/', views.insights, name='insights'),
+    path('partnership/', views.partnership, name='partnership'),
     
     # Resources Page
     path('resources/', views.resources, name='resources'),

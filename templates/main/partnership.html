@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="bg-black text-white text-center py-16">
+    <div class="max-w-4xl mx-auto">
+        <div class="flex justify-center">
+            <img src="{% static 'images/partnership-icon.svg' %}" alt="Partnership Icon" class="w-12 h-12">
+        </div>
+        <h1 class="text-4xl font-bold mt-4">Partnership Opportunities</h1>
+        <p class="mt-4 text-lg">
+            Join forces with KridaShastra to enhance sports infrastructure across India. 
+            We create valuable business relationships that drive growth and innovation.
+        </p>
+        <a href="#" class="mt-6 inline-block bg-white text-black font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition">
+            Become a Partner
+        </a>
+    </div>
+</section>
+
+<section class="text-center py-16 px-6">
+    <h2 class="text-3xl font-bold">Our Existing Partnerships</h2>
+    <p class="mt-2 text-gray-600 max-w-2xl mx-auto">
+        We're proud to work with leading organizations across India to advance sports 
+        infrastructure and development.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10 max-w-6xl mx-auto">
+        <!-- Government Institutions -->
+        <div class="bg-white shadow-lg rounded-lg p-6 text-left border border-gray-200">
+            <h3 class="text-xl font-semibold text-blue-900">Government Institutions</h3>
+            <p class="mt-2 text-gray-700">
+                We provide premium sports equipment to government sports bodies and training centers throughout India.
+            </p>
+            <h4 class="mt-4 font-semibold">Notable Partners:</h4>
+            <ul class="mt-2 text-gray-600 space-y-1">
+                <li>✔️ Sports Authority of India</li>
+                <li>✔️ National Institute of Sports</li>
+                <li>✔️ Indian Olympic Association</li>
+                <li>✔️ Sports Science Centers of Excellence</li>
+            </ul>
+        </div>
+
+        <!-- Educational Institutions -->
+        <div class="bg-white shadow-lg rounded-lg p-6 text-left border border-gray-200">
+            <h3 class="text-xl font-semibold text-blue-900">Educational Institutions</h3>
+            <p class="mt-2 text-gray-700">
+                Partnering with schools, colleges, and universities to establish world-class sports science facilities.
+            </p>
+            <h4 class="mt-4 font-semibold">Notable Partners:</h4>
+            <ul class="mt-2 text-gray-600 space-y-1">
+                <li>✔️ Lakshmibai National College of Physical Education</li>
+                <li>✔️ Indira Gandhi Institute of Physical Education and Sports Sciences</li>
+            </ul>
+        </div>
+
+        <!-- Private Organizations -->
+        <div class="bg-white shadow-lg rounded-lg p-6 text-left border border-gray-200">
+            <h3 class="text-xl font-semibold text-blue-900">Private Organizations</h3>
+            <p class="mt-2 text-gray-700">
+                Working with private sports clubs, training academies, and corporate wellness centers.
+            </p>
+            <h4 class="mt-4 font-semibold">Notable Partners:</h4>
+            <ul class="mt-2 text-gray-600 space-y-1">
+                <li>✔️ Professional Sports Clubs</li>
+                <li>✔️ Private Sports Academies</li>
+                <li>✔️ Corporate Wellness Programs</li>
+                <li>✔️ Rehabilitation Centers</li>
+            </ul>
+        </div>
+    </div>
+</section>
+{% endblock %}

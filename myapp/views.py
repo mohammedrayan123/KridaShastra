@@ -12,8 +12,8 @@ def services(request):
 def products(request):
     return render(request, 'main/products.html')
 
-def insights(request):
-    return render(request, 'main/insights.html')
+def partnership(request):
+    return render(request, 'main/partnership.html')
 
 def resources(request):
     return render(request, 'main/resources.html')
