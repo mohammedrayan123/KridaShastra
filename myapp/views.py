@@ -1,7 +1,13 @@
 from django.shortcuts import render
-
 def index(request):
-    return render(request, 'main/index.html')
+    card_data = [
+        {"title": "Athlete Success", "description": "Athletes benefiting from Krida Shastra's solutions.", "offset": -2 * 80},
+        {"title": "Data-Driven", "description": "Quantitative data showcasing performance improvements.", "offset": -1 * 80},
+        {"title": "Endorsements", "description": "Testimonials from coaches and organizations.", "offset": 0},
+        {"title": "Indian Hockey Team", "description": "12% improvement in endurance (2024).", "offset": 1 * 80},
+    ]
+    return render(request, "main/index.html", {"card_data": card_data})
+
 
 def about(request):
     return render(request, 'main/about.html')
