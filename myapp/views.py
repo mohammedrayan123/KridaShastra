@@ -1,10 +1,10 @@
 from django.shortcuts import render
 def index(request):
     card_data = [
-        {"title": "Athlete Success", "description": "Athletes benefiting from Krida Shastra's solutions.", "offset": -2 * 80},
-        {"title": "Data-Driven", "description": "Quantitative data showcasing performance improvements.", "offset": -1 * 80},
-        {"title": "Endorsements", "description": "Testimonials from coaches and organizations.", "offset": 0},
-        {"title": "Indian Hockey Team", "description": "12% improvement in endurance (2024).", "offset": 1 * 80},
+        {"slno":"1","title": "Athlete Success", "description": "Athletes benefiting from Krida Shastra's solutions.", "offset": -2 * 80},
+        {"slno":"2","title": "Data-Driven", "description": "Quantitative data showcasing performance improvements.", "offset": -1 * 80},
+        {"slno":"3","title": "Endorsements", "description": "Testimonials from coaches and organizations.", "offset": 0},
+        {"slno":"4","title": "Indian Hockey Team", "description": "12% improvement in endurance (2024).", "offset": 1 * 80},
     ]
     return render(request, "main/index.html", {"card_data": card_data})
 

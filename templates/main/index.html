@@ -79,38 +79,45 @@ clear. We want to transform sports performance using science.
 
 
 <!-- Features Section -->
-<section class="bg-gray-100 py-2 w-full">
+<section class="bg-gray-100 py-2 w-full mb-4">
 
-<div class="max-w-7xl mx-auto px-4 mt-8 flex items-center gap-8">
-   <!-- Left Section (Title & Description) -->
-   <div class="w-1/3">
-     <h2 class="text-3xl font-bold text-gray-800">Our Featured Products</h2>
-     <p class="mt-2 text-gray-600">Discover our latest and most popular products, carefully curated for you.</p>
-   </div>
-    <!-- Right Section (Carousel) -->
-   <div class="w-2/3">
-     <div class="carousel rounded-box space-x-4">
-       <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
-         <img class="h-40 w-full rounded-lg" src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" alt="Image 1" />
-       </div>
-       <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
-         <img class="h-40 w-full rounded-lg" src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp" alt="Image 2" />
-       </div>
-       <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
-         <img class="h-40 w-full rounded-lg" src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp" alt="Image 3" />
-       </div>
-       <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
-         <img class="h-40 w-full rounded-lg" src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp" alt="Image 4" />
-       </div>
-       <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
-         <img class="h-40 w-full rounded-lg" src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp" alt="Image 5" />
-       </div>
-     </div>
-   </div>
- </div>
+    <div class="max-w-7xl mx-auto px-4 mt-4 flex items-center gap-8">
+        <!-- Left Section (Title & Description) -->
+        <div class="w-1/3">
+          <h2 class="text-2xl font-bold text-gray-800">Elevating Athletic Performance</h2>
+          <p class="mt-2 text-gray-600">Collaborating with top leagues to enhance athlete performance and drive excellence.</p>
+        </div>
 
 
- <section class="py-6 text-center">
+        <div class="h-32 border-l border-gray-300"></div>
+
+
+         <!-- Right Section (Carousel) -->
+        <div class="w-2/3">
+          <div class="carousel rounded-box space-x-4">
+            <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
+              <img class="h-40 w-full rounded-lg" src="{% static 'images/Indian Premier League logo.svg' %}"  alt="ipl logo" />
+            </div>
+            
+            <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
+              <img class="h-40 w-full rounded-lg" src="{% static 'images/Indian_Super_League_logo.svg' %}" alt="Indian_Super_League_logo" />
+            </div>
+            <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
+              <img class="h-40 w-full rounded-lg" src="{% static 'images/Hockey_India_Logo.svg' %}" alt="Hockey_India_Logo" />
+            </div>
+            <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
+             <img class="h-30 w-90 rounded-lg" src="{% static 'images/pro-kabaddi.png' %}" alt="pro-kabaddi" />
+           </div>
+            <!-- <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
+              <img class="h-40 w-full rounded-lg" src="{% static 'images/Indian Premier League logo.svg' %}" alt="Image 5" />
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+     
+
+ <section class="py-8 text-center">
     <h2 class="text-3xl font-bold text-black mb-8">Why We Are the Best?</h2>
 
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -169,7 +176,7 @@ clear. We want to transform sports performance using science.
        
         <!-- Product Cards -->
         <div class="relative group overflow-hidden rounded-lg shadow-lg min-w-[23%]" data-aos="fade-up">
-          <img src="https://source.unsplash.com/400x300/?shoes" alt="Product" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
+            <img src="{% static 'images/sprotscience_prod/FORCEDECKS-FORCE-PLATFORMS.jpg' %}" alt="FORCEDECKS" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <h3 class="text-white text-lg font-semibold">Running Shoes</h3>
             <p class="text-white text-sm mt-2">$49.99</p>
@@ -177,14 +184,14 @@ clear. We want to transform sports performance using science.
         </div>
  
         <div class="relative group overflow-hidden rounded-lg shadow-lg min-w-[23%]" data-aos="fade-up" data-aos-delay="100">
-          <img src="https://source.unsplash.com/400x300/?watch" alt="Product" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
+            <img src="{% static 'images/sports-biomechanics-1.jpg' %}" alt="FORCEDECKS" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <h3 class="text-white text-lg font-semibold">Luxury Watch</h3>
             <p class="text-white text-sm mt-2">$199.99</p>
           </div>
         </div>
  
-        <div class="relative group overflow-hidden rounded-lg shadow-lg min-w-[23%]" data-aos="fade-up" data-aos-delay="200">
+        <!-- <div class="relative group overflow-hidden rounded-lg shadow-lg min-w-[23%]" data-aos="fade-up" data-aos-delay="200">
           <img src="https://source.unsplash.com/400x300/?headphones" alt="Product" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <h3 class="text-white text-lg font-semibold">Wireless Headphones</h3>
@@ -214,7 +221,7 @@ clear. We want to transform sports performance using science.
             <h3 class="text-white text-lg font-semibold">Digital Camera</h3>
             <p class="text-white text-sm mt-2">$499.99</p>
           </div>
-        </div>
+        </div> -->
  
       </div>
     </div>
@@ -259,29 +266,36 @@ clear. We want to transform sports performance using science.
 
 
 
- <div class="relative w-full h-[80vh] bg-cover bg-center flex items-center justify-start px-16"
-      style="background-image: url('https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp');">
-  
-   <!-- Dark Overlay -->
-   <div class="absolute inset-0 bg-black bg-opacity-50"></div>
 
 
-   <!-- Text Content -->
-   <div class="relative z-10 max-w-lg text-white text-left pl-24 opacity-0"
+
+<div class="relative w-full h-[80vh] bg-cover bg-center flex items-center justify-start px-16">
+    <!-- Background Video -->
+    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+        <source src="{% static '/images/6540601-uhd_2560_1440_25fps.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Dark Overlay (Darker for Contrast) -->
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+    <!-- Text Content -->
+    <div class="relative z-10 max-w-lg text-gray-200 text-left pl-24"
         data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
-     <h1 class="text-6xl font-bold">BK-24</h1>
-     <h2 class="text-2xl mt-2">PULMONARY FUNCTION TESTING</h2>
-     <p class="mt-4 text-lg">
-       Innovative modularity and networking for truly customised PFT solutions...
-     </p>
+        <h1 class="text-6xl font-bold">BK-24</h1>
+        <h2 class="text-2xl mt-2">PULMONARY FUNCTION TESTING</h2>
+        <p class="mt-4 text-lg">
+            Innovative modularity and networking for truly customised PFT solutions...
+        </p>
+
+        <!-- Button -->
+        <button class="mt-6 px-6 py-3 bg-white text-black font-semibold rounded-lg shadow-md hover:bg-gray-200 transition">
+            Learn More →
+        </button>
+    </div>
+</div>
 
 
-     <!-- Button -->
-     <button class="mt-6 px-6 py-3 bg-white text-black font-semibold rounded-lg shadow-md hover:bg-gray-200 transition">
-       Learn More →
-     </button>
-   </div>
- </div>
 
 
 
@@ -289,7 +303,7 @@ clear. We want to transform sports performance using science.
 <!-- Stats Box -->
 <section class="bg-gray-100 py-8 w-full">
 <div class="max-w-7xl mx-auto px-4 flex flex-col items-center text-gray-900 p-10">
-    <h2 class="text-4xl font-bold text-center mb-6">Our Business in Numbers</h2>
+    <h2 class="text-4xl font-bold text-center mb-2">Our Business in Numbers</h2>
     <p class="text-gray-600 text-center mb-10">See how we are growing and impacting the industry.</p>
 
     <!-- Stats Cards -->
@@ -323,78 +337,86 @@ clear. We want to transform sports performance using science.
 
 
 
-<!-- Hero Section -->
-<div class="hero bg-white min-h-screen flex justify-center items-center px-6">
-    <div class="hero-content flex-col lg:flex-row gap-12 max-w-5xl">
-      <!-- Image -->
-      <img
-        src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-        class="w-64 h-80 object-cover rounded-xl shadow-lg"
-        alt="Sports Science"
-      />
-      
-      <!-- Text Content -->
-      <div class="relative flex flex-col items-start space-y-8 mt-4">
-        <!-- Vertical Line -->
-        <div class="absolute left-5 top-0 h-full w-1 bg-gray-300"></div>
-    
-        <!-- Point 1 -->
-        <div class="flex items-center space-x-4 relative">
-            <div class="relative dripping bg-black text-white font-bold w-10 h-10 flex items-center justify-center rounded-md shadow-md z-10">
-                1
+
+
+
+<div class="bg-white min-h-[55vh] flex flex-col justify-center items-center px-6">
+    <!-- Heading -->
+    <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">
+        Driving Innovation in Sports Science
+    </h2>
+
+    <div class="flex flex-col lg:flex-row gap-12 max-w-4xl w-full">
+        <!-- Image -->
+        <img
+            src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+            class="w-full max-w-xs h-80 object-cover rounded-xl shadow-lg mx-auto lg:mx-0"
+            alt="Sports Science"
+        />
+
+        <!-- Text Content -->
+        <div class="relative flex flex-col items-start space-y-8 w-full">
+            <!-- Vertical Line Behind Numbers -->
+            <div class="absolute left-4 top-0 mt-10 h-60 bottom-0 w-2 bg-gray-900 hidden sm:block"></div>
+
+            <!-- Points -->
+            <div class="relative flex items-center space-x-4">
+                <div class="bg-black text-white font-bold w-10 h-10 flex items-center justify-center rounded-md shadow-md relative z-10">
+                    1
+                </div>
+                <div>
+                    <h2 class="font-bold text-gray-800">Dedicated to Advancement</h2>
+                    <p class="text-gray-600 text-sm">We advance the field through research and education.</p>
+                </div>
             </div>
-            <div>
-                <h2 class="font-bold text-gray-800">Dedicated to Advancement</h2>
-                <p class="text-gray-600 text-sm">We advance the field through research and education.</p>
+
+            <div class="relative flex items-center space-x-4">
+                <div class="bg-black text-white font-bold w-10 h-10 flex items-center justify-center rounded-md shadow-md relative z-10">
+                    2
+                </div>
+                <div>
+                    <h2 class="font-bold text-gray-800">Collaborations</h2>
+                    <p class="text-gray-600 text-sm">Collaborations with top sports scientists and institutions.</p>
+                </div>
             </div>
-        </div>
-    
-        <!-- Point 2 -->
-        <div class="flex items-center space-x-4 relative">
-            <div class="relative dripping bg-black text-white font-bold w-10 h-10 flex items-center justify-center rounded-md shadow-md z-10">
-                2
+
+            <div class="relative flex items-center space-x-4">
+                <div class="bg-black text-white font-bold w-10 h-10 flex items-center justify-center rounded-md shadow-md relative z-10">
+                    3
+                </div>
+                <div>
+                    <h2 class="font-bold text-gray-800">Investments</h2>
+                    <p class="text-gray-600 text-sm">Investments in cutting-edge equipment.</p>
+                </div>
             </div>
-            <div>
-                <h2 class="font-bold text-gray-800">Collaborations</h2>
-                <p class="text-gray-600 text-sm">Collaborations with top sports scientists and institutions.</p>
-            </div>
-        </div>
-    
-        <!-- Point 3 -->
-        <div class="flex items-center space-x-4 relative">
-            <div class="relative dripping bg-black text-white font-bold w-10 h-10 flex items-center justify-center rounded-md shadow-md z-10">
-                3
-            </div>
-            <div>
-                <h2 class="font-bold text-gray-800">Investments</h2>
-                <p class="text-gray-600 text-sm">Investments in cutting-edge equipment.</p>
-            </div>
-        </div>
-    
-        <!-- Point 4 -->
-        <div class="flex items-center space-x-4 relative">
-            <div class="relative dripping bg-black text-white font-bold w-10 h-10 flex items-center justify-center rounded-md shadow-md z-10">
-                4
-            </div>
-            <div>
-                <h2 class="font-bold text-gray-800">Sponsorship</h2>
-                <p class="text-gray-600 text-sm">Sponsoring research grants worth $100,000 annually.</p>
+
+            <div class="relative flex items-center space-x-4">
+                <div class="bg-black text-white font-bold w-10 h-10 flex items-center justify-center rounded-md shadow-md relative z-10">
+                    4
+                </div>
+                <div>
+                    <h2 class="font-bold text-gray-800">Sponsorship</h2>
+                    <p class="text-gray-600 text-sm">Sponsoring research grants worth $100,000 annually.</p>
+                </div>
             </div>
         </div>
     </div>
-        
-        <!-- Button -->
-        <button class="btn btn-primary mt-6">Learn More</button>
-      </div>
-    </div>
-  </div>
+</div>
+
+
+
   
 
 
 
 
 
-  <div class="w-full min-h-screen bg-gray-900 flex justify-center items-center text-white">
+<div class="w-full min-h-screen bg-gray-900 flex flex-col justify-center items-center text-white px-6">
+
+    <!-- Section Title -->
+    <h2 class="text-3xl font-bold text-white text-center mb-10">
+        Transforming the <span style="color: #FF9933;">Future</span> of <span style="color: #138808;">Indian</span> Sports
+    </h2>
 
     <!-- Content Wrapper -->
     <div class="max-w-7xl mx-auto p-6 flex flex-col md:flex-row items-start gap-10">
@@ -424,7 +446,7 @@ clear. We want to transform sports performance using science.
                 </div>
             </div>
             <!-- Image Below, Aligned Properly -->
-            <div class="mt-4 w-full flex justify-center">
+            <div class="mt-4 w-full h-60 flex justify-center">
                 <img src="{% static 'images/School sports.jpg' %}" alt="School sports" class="mr-35 rounded-lg shadow-lg w-3/4">
             </div>
         </div>
@@ -455,9 +477,7 @@ clear. We want to transform sports performance using science.
                         <span class="bg-gray-500 text-white px-3 py-1 rounded-md font-bold">3</span>
                     </div>
                 </div>
-                
-                
-                
+
                 <p class="mt-4 text-gray-300 text-sm">
                     Comprehensive training programs for aspiring athletes. Using data-driven insights to optimize performance. Supporting 50+ athletes training for the 2028 and 2032 Olympics.
                 </p>
@@ -468,13 +488,15 @@ clear. We want to transform sports performance using science.
 
 </div>
 
-<section class="krida-rotating-section flex flex-col items-center justify-center h-screen bg-gray-100">
+
+<section class="krida-rotating-section flex flex-col items-center justify-center h-[60vh] bg-gray-100">
     <!-- Heading -->
     <h2 class="krida-heading text-2xl font-bold text-gray-800 mb-6">Case Studies: Success Stories</h2>
 
     <div class="krida-card-container relative w-full max-w-2xl h-[350px] flex justify-center items-center perspective-1000">
         {% for card in card_data %}
         <div class="krida-card absolute w-[350px] h-[320px] bg-white rounded-2xl shadow-xl p-6 flex flex-col justify-center items-center text-center transition-all duration-[3000ms] ease-[cubic-bezier(0.4, 0, 0.2, 1)]">
+            <h1 class="krida-card-title bg-black rounded-2xl m-4 py-4 px-6 text-xl text-white font-bold">{{ card.slno }}</h1>
             <h2 class="krida-card-title text-lg font-bold">{{ card.title }}</h2>
             <p class="krida-card-text text-sm text-gray-500 mt-2">{{ card.description }}</p>
         </div>
@@ -550,6 +572,35 @@ clear. We want to transform sports performance using science.
             </p>
         </div>
 
+        <!-- Featured Partner Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 justify-center gap-6 mb-10">
+            <!-- Partner 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 bg-gray-100 w-full h-65 flex flex-col items-center">
+                <div class="w-full h-1/2 flex justify-center items-center">
+                    <img src="{% static 'images/kangatech.png' %}" alt="kangatech" class="h-4/5">
+                </div>
+                <div class="text-center my-4">
+                    <h3 class="text-lg font-bold text-black">KangaTech</h3>
+                    <p class="text-gray-600 text-sm mt-2">
+                        KangaTech offers cutting-edge isometric strength testing and training solutions, focusing on measuring neuromuscular strength and mitigating injury risks for elite athletes.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Partner 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 bg-gray-100 w-full h-65 flex flex-col items-center">
+                <div class="w-full h-1/2 flex justify-center items-center">
+                    <img src="{% static 'images/ksport-logo-bar.png' %}" alt="ksport-logo-bar" class="h-4/5 bg-gray-800 p-3 m-4">
+                </div>
+                <div class="text-center my-4">
+                    <h3 class="text-lg font-bold text-black">K-Sport</h3>
+                    <p class="text-gray-600 text-sm mt-2">
+                        K-Sport specializes in advanced sports technology and AI-driven performance analysis tools, including wearable devices and optical tracking systems, to monitor and enhance athletic performance.
+                    </p>
+                </div>
+            </div>
+        </div>
+
         <!-- Partnership Cards -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="bg-gray-100 p-6 rounded-lg shadow-md">
@@ -595,6 +646,62 @@ clear. We want to transform sports performance using science.
         </div>
     </div>
 </section>
+
+<section class="w-full h-[40vh] bg-cover bg-center relative">
+    <img src="{% static 'images/indian sports.jpg' %}" alt="Indian Sports" class="w-full h-full object-cover">
+</section>
+  
+
+<div class="max-w-3xl mx-auto mt-10">
+    <h2 class="text-3xl font-bold text-center mb-8">Future Plans: Expanding Our Impact</h2>
+  
+    <div class="relative">
+      <!-- Vertical Line (Full Height) -->
+      <div class="absolute left-1/2 transform -translate-x-1/2 mt-10 h-93 w-1 bg-gray-300 top-0 bottom-0"></div>
+  
+      <ul class="timeline">
+        <!-- Item 1 (Left) -->
+        <li class="timeline-item">
+          <div class="timeline-content text-right pr-10">
+            <h3 class="text-lg font-bold text-gray-700">National Academy</h3>
+            <p class="text-gray-500">Launching a national sports science academy.</p>
+          </div>
+          <div class="timeline-dot bg-gray-700 text-white">1</div>
+        </li>
+  
+        <!-- Item 2 (Right) -->
+        <li class="timeline-item flex-row-reverse">
+          <div class="timeline-content text-left pl-10">
+            <h3 class="text-lg font-bold text-gray-700">Innovation</h3>
+            <p class="text-gray-500">Developing innovative new equipment.</p>
+          </div>
+          <div class="timeline-dot bg-gray-600 text-white">2</div>
+        </li>
+  
+        <!-- Item 3 (Left) -->
+        <li class="timeline-item">
+          <div class="timeline-content text-right pr-10">
+            <h3 class="text-lg font-bold text-gray-700">Partnerships</h3>
+            <p class="text-gray-500">Collaborating with organizations to advance sports science.</p>
+          </div>
+          <div class="timeline-dot bg-gray-500 text-white">3</div>
+        </li>
+  
+        <!-- Item 4 (Right) -->
+        <li class="timeline-item flex-row-reverse">
+          <div class="timeline-content text-left pl-10">
+            <h3 class="text-lg font-bold text-gray-700">Asian Leader</h3>
+            <p class="text-gray-500">Goal: Leading sports science company in Asia by 2030.</p>
+          </div>
+          <div class="timeline-dot bg-gray-400 text-white">4</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  
+  
+
 
 
 <section class="bg-black py-16">

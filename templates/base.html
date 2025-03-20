@@ -4,39 +4,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>KridaShastra | Sports Science & Equipment</title>
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
       type="text/css"
     />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-<style>
-    @keyframes bounce {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-5px); }
-    }
-    .animate-bounce {
+    <style>
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+      .animate-bounce {
         animation: bounce 1.5s infinite;
-    }
-</style>
-<style>
-    .scrollbar-hide::-webkit-scrollbar {
-      display: none;
-    }
-    .scrollbar-hide {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-    #contactBtn {
-    z-index: 50;
-}
-
-  </style>
+      }
+    </style>
+    <style>
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      #contactBtn {
+        z-index: 50;
+      }
+    </style>
     <script>
       tailwind.config = {
         theme: { extend: {} },
@@ -51,406 +61,519 @@
 
     <link rel="stylesheet" href="{% static '/css/styles.css' %}" />
     <script src="{% static '/js/scripts.js' %}"></script>
-      <!-- Add margin-top to prevent overlap -->
-      <style>
-
-@keyframes bounce {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-5px); }
-    }
-    .animate-bounce {
+    <!-- Add margin-top to prevent overlap -->
+    <style>
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+      .animate-bounce {
         animation: bounce 1.5s infinite;
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      #contactBtn {
+        z-index: 50;
+      }
+      body {
+        padding-top: 80px; /* Prevents navbar from overlapping content */
+      }
+
+      /* Default navbar background */
+      #navbar {
+        background: rgba(
+          255,
+          255,
+          255,
+          0.9
+        ); /* Initial semi-transparent background */
+        backdrop-filter: blur(5px); /* No blur initially */
+      }
+
+      /* Navbar effect on scroll */
+      .scrolled {
+        background: rgba(255, 255, 255, 0.5); /* More transparency */
+        backdrop-filter: blur(10px); /* Apply blur */
+      }
+      @keyframes drip {
+        0% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        50% {
+          transform: translateY(10px);
+          opacity: 0.8;
+        }
+        100% {
+          transform: translateY(15px);
+          opacity: 0;
+        }
+      }
+
+      .dripping::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        width: 5px;
+        height: 10px;
+        background: black;
+        border-radius: 50%;
+        opacity: 0;
+        animation: drip 1.5s infinite ease-in-out;
+      }
+
+      .dripping:hover::after {
+        opacity: 1;
+      }
+
+      .krida-container {
+        position: relative;
+        width: 320px;
+        height: 180px;
+        overflow: hidden;
+      }
+
+      .krida-card {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        transition: transform 3s ease-in-out, opacity 1s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+      }
+
+      .krida-card-1 {
+        background-color: #1e40af;
+        color: white;
+      }
+      .krida-card-2 {
+        background-color: #059669;
+        color: white;
+      }
+      .krida-card-3 {
+        background-color: #dc2626;
+        color: white;
+      }
+      .krida-card-4 {
+        background-color: #fbbf24;
+        color: black;
+      }
+
+      .timeline {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
     }
-    .scrollbar-hide::-webkit-scrollbar {
-      display: none;
+  
+    .timeline-item {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      margin-bottom: 3rem;
     }
-    .scrollbar-hide {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
+  
+    .timeline-dot {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
     }
-    #contactBtn {
-    z-index: 50;
-}
-        body {
-          padding-top: 80px; /* Prevents navbar from overlapping content */
-        }
-      
-        /* Default navbar background */
-        #navbar {
-          background: rgba(255, 255, 255, 0.9); /* Initial semi-transparent background */
-          backdrop-filter: blur(5px); /* No blur initially */
-        }
-      
-        /* Navbar effect on scroll */
-        .scrolled {
-          background: rgba(255, 255, 255, 0.5); /* More transparency */
-          backdrop-filter: blur(10px); /* Apply blur */
-        }
-        @keyframes drip {
-    0% { transform: translateY(0); opacity: 1; }
-    50% { transform: translateY(10px); opacity: 0.8; }
-    100% { transform: translateY(15px); opacity: 0; }
-}
-
-.dripping::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    width: 5px;
-    height: 10px;
-    background: black;
-    border-radius: 50%;
-    opacity: 0;
-    animation: drip 1.5s infinite ease-in-out;
-}
-
-.dripping:hover::after {
-    opacity: 1;
-}
-
-
-.krida-container {
-            position: relative;
-            width: 320px;
-            height: 180px;
-            overflow: hidden;
-        }
-
-        .krida-card {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-            transition: transform 3s ease-in-out, opacity 1s ease-in-out;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-        }
-
-        .krida-card-1 { background-color: #1E40AF; color: white; }
-        .krida-card-2 { background-color: #059669; color: white; }
-        .krida-card-3 { background-color: #DC2626; color: white; }
-        .krida-card-4 { background-color: #FBBF24; color: black; }
-
-
-
-      </style>
+  
+    .timeline-content {
+      width: 45%;
+    }
+  
+    /* Make every second item shift to the right */
+    .timeline-item.flex-row-reverse {
+      flex-direction: row-reverse;
+    }
+    </style>
   </head>
   <body>
-    
     <!-- ✅ Navbar -->
-    <nav class="bg-white shadow-md fixed w-full top-0 z-50 h-20">
-        <div class="container mx-auto px-4 pt-5 md:px-6 flex justify-between items-center h-16">
-            <!-- Left Section -->
-            <div class="flex items-center">
-                <!-- 🍔 Hamburger Menu (Mobile Only) -->
-                <button id="menuToggle" class="md:hidden focus:outline-none p-2">
-                    <svg class="h-6 w-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
-                </button>
-    
-                <!-- 🌟 Logo -->
-                <a href="{% url 'index' %}" class="text-2xl font-bold ml-3">KridaShastra</a>
-            </div>
-    
-            <!-- 📌 Desktop Menu -->
-            <div class="hidden md:flex space-x-6">
-                <a href="{% url 'products' %}" class="text-gray-700 hover:text-black">Products</a>
-                <a href="{% url 'partnership' %}" class="text-gray-700 hover:text-black">Partnership</a>
-                <a href="{% url 'contact' %}" class="text-gray-700 hover:text-black">Contact Us</a>
-            </div>
-    
-            <!-- 🔍 Search, Notifications, and Icons -->
-            <div class="flex items-center space-x-4">
-                <!-- 🔍 Search Input (Initially Hidden) -->
-                <div id="searchContainer" class="hidden flex items-center border rounded-lg overflow-hidden">
-                    <input type="text" id="searchInput" placeholder="Search..." 
-                        class="px-3 py-1 border-none focus:outline-none w-40">
-                    <button id="searchEnterBtn" class="px-2 text-gray-500 hover:text-blue-500">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m7.49 12-3.75 3.75m0 0 3.75 3.75m-3.75-3.75h16.5V4.499" />
-                        </svg>
-                    </button>
-                </div>
-    
-                <!-- 🔍 Search Icon -->
-                <button id="searchBtn" class="p-2">
-                    <svg class="h-6 w-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                    </svg>
-                </button>
-    
-                <!-- 🔔 Notification Icon -->
-                <div class="relative">
-                    <button id="notificationBtn" class="p-2">
-                        <svg class="h-6 w-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
-                        </svg>
-                        <span class="absolute top-0 right-0 bg-red-500 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">!</span>
-                    </button>
-    
-                    <!-- 🔔 Notification Dropdown -->
-                    <div id="notificationDropdown" class="hidden absolute right-0 mt-2 w-64 bg-white shadow-md rounded-lg p-4">
-                        <p class="text-sm text-gray-700">No new notifications</p>
-                    </div>
-                </div>
-            </div>
+<nav class="bg-white shadow-md fixed w-full top-0 z-50 h-20">
+  <div class="container mx-auto px-4 pt-5 md:px-6 flex justify-between items-center h-16">
+    <!-- Left Section -->
+    <div class="flex items-center">
+      <!-- 🍔 Hamburger Menu (Mobile Only) -->
+      <button id="menuToggle" class="md:hidden focus:outline-none p-2">
+        <svg class="h-6 w-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- 🌟 Logo -->
+      <a href="{% url 'index' %}" class="ml-3">
+        <img src="{% static 'images/krida logo - 2.png' %}" alt="KridaShastra Logo" class="h-12">
+      </a>
+    </div>
+
+    <!-- 📌 Desktop Menu -->
+    <div class="hidden md:flex space-x-6">
+      <a href="{% url 'partnership' %}" class="text-gray-700 hover:text-black">Partnership</a>
+      <a href="{% url 'products' %}" class="text-gray-700 hover:text-black">Products</a>
+      <a href="{% url 'contact' %}" class="text-gray-700 hover:text-black">Contact Us</a>
+    </div>
+
+    <!-- 🔍 Search, Notifications, and Icons -->
+    <div class="flex items-center space-x-4">
+      <!-- 🔍 Search Input (Initially Hidden) -->
+      <div id="searchContainer" class="hidden flex items-center border rounded-lg overflow-hidden">
+        <input type="text" id="searchInput" placeholder="Search..." class="px-3 py-1 border-none focus:outline-none w-40">
+        <button id="searchEnterBtn" class="px-2 text-gray-500 hover:text-blue-500">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m7.49 12-3.75 3.75m0 0 3.75 3.75m-3.75-3.75h16.5V4.499" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- 🔍 Search Icon -->
+      <button id="searchBtn" class="p-2">
+        <svg class="h-6 w-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </button>
+
+      <!-- 🔔 Notification Icon -->
+      <div class="relative">
+        <button id="notificationBtn" class="p-2">
+          <svg class="h-6 w-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+          </svg>
+          <span class="absolute top-0 right-0 bg-red-500 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">!</span>
+        </button>
+
+        <!-- 🔔 Notification Dropdown -->
+        <div id="notificationDropdown" class="hidden absolute right-0 mt-2 w-64 bg-white shadow-md rounded-lg p-4">
+          <p class="text-sm text-gray-700">No new notifications</p>
         </div>
-    
-        <!-- 📱 Mobile Menu (Hidden by Default) -->
-        <div id="mobileMenu" class="hidden bg-white w-full px-6 py-4 absolute top-16 left-0 shadow-md">
-            <a href="{% url 'products' %}" class="block py-2 text-gray-700 hover:text-black">Products</a>
-            <a href="#" class="block py-2 text-gray-700 hover:text-black">Partnership</a>
-            <a href="{% url 'contact' %}" class="block py-2 text-gray-700 hover:text-black">Contact Us</a>
-        </div>
-    </nav>
-    
+      </div>
+    </div>
+  </div>
+
+  <!-- 📱 Mobile Menu (Hidden by Default) -->
+  <div id="mobileMenu" class="hidden bg-white w-full px-6 py-4 absolute top-16 left-0 shadow-md">
+    <a href="{% url 'products' %}" class="block py-2 text-gray-700 hover:text-black">Products</a>
+    <a href="{% url 'partnership' %}" class="block py-2 text-gray-700 hover:text-black">Partnership</a>
+    <a href="{% url 'contact' %}" class="block py-2 text-gray-700 hover:text-black">Contact Us</a>
+  </div>
+</nav>
+
+
     <!-- ✅ JavaScript -->
     <script>
-    document.addEventListener("DOMContentLoaded", function () {
+      document.addEventListener("DOMContentLoaded", function () {
         const menuToggle = document.getElementById("menuToggle");
         const mobileMenu = document.getElementById("mobileMenu");
         const searchBtn = document.getElementById("searchBtn");
         const searchContainer = document.getElementById("searchContainer");
         const notificationBtn = document.getElementById("notificationBtn");
-        const notificationDropdown = document.getElementById("notificationDropdown");
-    
+        const notificationDropdown = document.getElementById(
+          "notificationDropdown"
+        );
+
         // 🍔 Toggle Mobile Menu
         menuToggle.addEventListener("click", function () {
-            mobileMenu.classList.toggle("hidden");
+          mobileMenu.classList.toggle("hidden");
         });
-    
+
         // ❌ Close Mobile Menu on Outside Click
         document.addEventListener("click", function (event) {
-            if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-                mobileMenu.classList.add("hidden");
-            }
+          if (
+            !mobileMenu.contains(event.target) &&
+            !menuToggle.contains(event.target)
+          ) {
+            mobileMenu.classList.add("hidden");
+          }
         });
-    
+
         // 🔍 Toggle Search Box
         searchBtn.addEventListener("click", function () {
-            searchContainer.classList.toggle("hidden");
+          searchContainer.classList.toggle("hidden");
         });
-    
+
         // 🔔 Toggle Notifications Dropdown
         notificationBtn.addEventListener("click", function () {
-            notificationDropdown.classList.toggle("hidden");
+          notificationDropdown.classList.toggle("hidden");
         });
-    
+
         // ❌ Close Notification Dropdown on Outside Click
         document.addEventListener("click", function (event) {
-            if (!notificationDropdown.contains(event.target) && !notificationBtn.contains(event.target)) {
-                notificationDropdown.classList.add("hidden");
-            }
+          if (
+            !notificationDropdown.contains(event.target) &&
+            !notificationBtn.contains(event.target)
+          ) {
+            notificationDropdown.classList.add("hidden");
+          }
         });
-    });
+      });
     </script>
-    
-   
-    
-    
-    
-    
 
-
-
-      
-      <!-- Add padding to prevent content overlap -->
-
-      
-
-      
-      
-
-      
-
-      
-    
-
+    <!-- Add padding to prevent content overlap -->
 
     <!-- Content Block -->
     {% block content %}{% endblock %}
-   <!-- Sticky Contact Us Button -->
-<!-- Sticky Contact Button -->
-<!-- Sticky Contact Button -->
-<button id="contactBtn" class="fixed bottom-16 right-6 flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 animate-bounce">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE60lEQVR4nN2aa4yeQxTHZ6t4lbY02iVoRd36xWUjQoME1TR8QJOKRFakgqigITRL3RKJRgiClKAfpEJIKRHXImgtcauqCO2qS2g3ui5p1WVrf3LkP8z7vM9lntc+u/v6J81mnznnzDkzZ878z2ydG0YAo4DTgfuBtUAvsF0/1wCLgVNNzo1UAMfL+Ri8D0x3Iw3A2cDvcvJz4AqgA9hTuzRRvy8AeiT3GzDHjRQARwK/yrlbgNEF8jsDt0vegu9wIwHAa3LqnpJ6d0nvQ6CtOg/jnDlcznwP7FZStwZ8Lf0Z1XkZ58wNcuTOJvUXSn9xsw7sAlwEvABsBLYpX1cDF8ZuNfCsHDmtST+Okf6aZpQPAz4rKI+FKwxMBn4BBoB9mgxkgubrK6s4zZSk/A4wG9gXGKMSaWV0q5w7pMDWY7LzaDNBGIAdZeMPFwtgLLBeio+bkQy5JZK5KsfWCQrWdmS/aCcSAPbWXL0uFsBDwa1aUz3vBC4Dzgjk5kjuxRxbb0rm+mgHUmDzys6KWIWZWkE71Ifq24PBmbCxsUHuGzbn2PNlc3lRCuYBeEp2ro4R3km04R8FpZlRhH6ROjsXNwJ3A29JtifH5jlKK8OmQidSABwbLG57jMKVmnCtpw/KcX/gn0ipWhbk3Mj8ptCJBMS/LMUNN7kiAOOAH6UwM/g+T9/u051ysSiD/bvcp1mEfVtRylIMYJb0LEXHxCgsSDtMwDX6fnMZB1Lsb5Kd9pJ6S6TXFSNc063dwGWCdLutCf9DO8/JjjVMu5bQ+0R6xcxXpdXwbsZhNSxtwv/QznEqGB7fAYuswBTo9Ul+Qswkz0v4gpSxGUV3RSyAk4BuVT+PRQU62yRXKzLerpUyIrhHRjNk6P6vgQTl3C7St2V3Y4F8v+ReVTNm99wOaYKXSnB5hiFffl8W212ptLA29BEbT8hPAq7VxOuAD4AHtBvGDDbXV29WFgTyBo34BrgkKfi0BjszDJ2n8T/Jxr22SsD5wBbicUReEB7GMFJ068kj8KUGDqob+HfcVtOjRyzYqtxexp+CHF6ln/3qs23yNjHlucEdFWJ+2pxJaCcbkBTy9CG1/QQ+1rjl9O4p49OBn/0qWaAZdvzOh/jCLtk0eQ8t2vqYQPxKNRz0oJd4z3I/bVwys2WnM6LVTWJpTpswGng4Q68hEB/tVFchFGwWjMedBUzRDkxJVLaoQHxun1hxIPboNqhwiQnu0PeFBc1RdxpBtLOlsVUR91WlgZyp7x9lNT56GEN0+hTjSurdTzZaE/O6IeZcaSA1XXAeLwEHJ2T2Bzbk2PwKOCAvENnprywQg90hosvW/fnXwLrLChgPXKfd2aqyvVp3yXgXgQTHGvxAEvTC1/u+wXw0rjy1Mvp2/yr4A3C0K/egZ7v0SsrYxCENJAjmScn/VPTMaZepmKn17x51zZMtyJAHEtyqxm5Rv71MFHqcCsSk4E9nWwJi6Q/0ZBcAOHdYAjGI9M0PikAWBtTKdgS38VEuAHDrsAWSyO8uXYy9OjtG+FbocWJaymPBvAzyOXyBlIF6EsOy4NvUwQ7C4KqEqMh2tc5/M2btZmsFYgCe0VxdegD/tlUDmaW5NogN0KqBjAI+1XwDLRtI4mGvMrihgF5V1rV8IIk/Kbd8IAf+XwJp0xNRawdiCP4nUMsH8nrVgfwFzi7H98g0S+AAAAAASUVORK5CYII=" alt="muscle-flexing" class="w-6 h-6">
-    <span class="font-semibold">Let's Connect</span>
-</button>
+    <!-- Sticky Contact Us Button -->
+    <!-- Sticky Contact Button -->
+    <!-- Sticky Contact Button -->
+    <button
+      id="contactBtn"
+      class="fixed bottom-16 right-6 flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 animate-bounce"
+    >
+      <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE60lEQVR4nN2aa4yeQxTHZ6t4lbY02iVoRd36xWUjQoME1TR8QJOKRFakgqigITRL3RKJRgiClKAfpEJIKRHXImgtcauqCO2qS2g3ui5p1WVrf3LkP8z7vM9lntc+u/v6J81mnznnzDkzZ878z2ydG0YAo4DTgfuBtUAvsF0/1wCLgVNNzo1UAMfL+Ri8D0x3Iw3A2cDvcvJz4AqgA9hTuzRRvy8AeiT3GzDHjRQARwK/yrlbgNEF8jsDt0vegu9wIwHAa3LqnpJ6d0nvQ6CtOg/jnDlcznwP7FZStwZ8Lf0Z1XkZ58wNcuTOJvUXSn9xsw7sAlwEvABsBLYpX1cDF8ZuNfCsHDmtST+Okf6aZpQPAz4rKI+FKwxMBn4BBoB9mgxkgubrK6s4zZSk/A4wG9gXGKMSaWV0q5w7pMDWY7LzaDNBGIAdZeMPFwtgLLBeio+bkQy5JZK5KsfWCQrWdmS/aCcSAPbWXL0uFsBDwa1aUz3vBC4Dzgjk5kjuxRxbb0rm+mgHUmDzys6KWIWZWkE71Ifq24PBmbCxsUHuGzbn2PNlc3lRCuYBeEp2ro4R3km04R8FpZlRhH6ROjsXNwJ3A29JtifH5jlKK8OmQidSABwbLG57jMKVmnCtpw/KcX/gn0ipWhbk3Mj8ptCJBMS/LMUNN7kiAOOAH6UwM/g+T9/u051ysSiD/bvcp1mEfVtRylIMYJb0LEXHxCgsSDtMwDX6fnMZB1Lsb5Kd9pJ6S6TXFSNc063dwGWCdLutCf9DO8/JjjVMu5bQ+0R6xcxXpdXwbsZhNSxtwv/QznEqGB7fAYuswBTo9Ul+Qswkz0v4gpSxGUV3RSyAk4BuVT+PRQU62yRXKzLerpUyIrhHRjNk6P6vgQTl3C7St2V3Y4F8v+ReVTNm99wOaYKXSnB5hiFffl8W212ptLA29BEbT8hPAq7VxOuAD4AHtBvGDDbXV29WFgTyBo34BrgkKfi0BjszDJ2n8T/Jxr22SsD5wBbicUReEB7GMFJ068kj8KUGDqob+HfcVtOjRyzYqtxexp+CHF6ln/3qs23yNjHlucEdFWJ+2pxJaCcbkBTy9CG1/QQ+1rjl9O4p49OBn/0qWaAZdvzOh/jCLtk0eQ8t2vqYQPxKNRz0oJd4z3I/bVwys2WnM6LVTWJpTpswGng4Q68hEB/tVFchFGwWjMedBUzRDkxJVLaoQHxun1hxIPboNqhwiQnu0PeFBc1RdxpBtLOlsVUR91WlgZyp7x9lNT56GEN0+hTjSurdTzZaE/O6IeZcaSA1XXAeLwEHJ2T2Bzbk2PwKOCAvENnprywQg90hosvW/fnXwLrLChgPXKfd2aqyvVp3yXgXgQTHGvxAEvTC1/u+wXw0rjy1Mvp2/yr4A3C0K/egZ7v0SsrYxCENJAjmScn/VPTMaZepmKn17x51zZMtyJAHEtyqxm5Rv71MFHqcCsSk4E9nWwJi6Q/0ZBcAOHdYAjGI9M0PikAWBtTKdgS38VEuAHDrsAWSyO8uXYy9OjtG+FbocWJaymPBvAzyOXyBlIF6EsOy4NvUwQ7C4KqEqMh2tc5/M2btZmsFYgCe0VxdegD/tlUDmaW5NogN0KqBjAI+1XwDLRtI4mGvMrihgF5V1rV8IIk/Kbd8IAf+XwJp0xNRawdiCP4nUMsH8nrVgfwFzi7H98g0S+AAAAAASUVORK5CYII="
+        alt="muscle-flexing"
+        class="w-6 h-6"
+      />
+      <span class="font-semibold">Let's Connect</span>
+    </button>
 
+    <!-- Tailwind CSS for animation -->
 
-<!-- Tailwind CSS for animation -->
+    <div
+      id="contactForm"
+      class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center opacity-0 invisible transition-opacity duration-300"
+    >
+      <div
+        class="bg-white rounded-lg shadow-lg w-[700px] md:w-[900px] p-6 flex transform scale-90 transition-transform duration-300"
+      >
+        <!-- Left Section: Text + GIF -->
+        <div
+          class="w-1/2 flex flex-col justify-center items-center text-center p-6 bg-sky-100 rounded-l-lg"
+        >
+          <h2 class="text-2xl font-bold text-sky-600 mb-4">Let's Connect!</h2>
+          <p class="text-gray-600 mb-6">
+            Have a question? Fill out the form, and we'll get back to you soon.
+          </p>
+          <!-- <img src="https://media.giphy.com/media/JFawGLFMCJNDi/giphy.gif" alt="Contact GIF" class="w-32 h-32"> -->
+        </div>
 
+        <!-- Right Section: Contact Form -->
+        <div class="w-1/2 p-6">
+          <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
 
-<div id="contactForm" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center opacity-0 invisible transition-opacity duration-300">
-    <div class="bg-white rounded-lg shadow-lg w-[700px] md:w-[900px] p-6 flex transform scale-90 transition-transform duration-300">
-      
-      <!-- Left Section: Text + GIF -->
-      <div class="w-1/2 flex flex-col justify-center items-center text-center p-6 bg-sky-100 rounded-l-lg">
-        <h2 class="text-2xl font-bold text-sky-600 mb-4">Let's Connect!</h2>
-        <p class="text-gray-600 mb-6">Have a question? Fill out the form, and we'll get back to you soon.</p>
-        <img src="https://media.giphy.com/media/JFawGLFMCJNDi/giphy.gif" alt="Contact GIF" class="w-32 h-32">
-      </div>
-  
-      <!-- Right Section: Contact Form -->
-      <div class="w-1/2 p-6">
-        <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
-  
-        <form id="contactFormContent" action="https://submit-form.com/ofKMjXsm7" method="POST">
-          <div class="mb-4">
-            <label class="block text-gray-700 font-semibold">Name</label>
-            <input type="text" name="name" class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500" required>
-          </div>
-  
-          <div class="mb-4">
-            <label class="block text-gray-700 font-semibold">Email</label>
-            <input type="email" name="email" class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500" required>
-          </div>
-  
-          <div class="mb-4">
-            <label class="block text-gray-700 font-semibold">Phone</label>
-            <input type="tel" name="phone" class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500" required>
-          </div>
+          <form
+            id="contactFormContent"
+            action="https://submit-form.com/ofKMjXsm7"
+            method="POST"
+          >
+            <div class="mb-4">
+              <label class="block text-gray-700 font-semibold">Name</label>
+              <input
+                type="text"
+                name="name"
+                class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500"
+                required
+              />
+            </div>
 
-          <input type="hidden" name="_redirect" value="https://yoursite.com/success">
-  
-          <div class="flex justify-between">
-            <button type="button" id="closeBtn" class="text-gray-600 hover:text-gray-800">Cancel</button>
-            <button type="submit" class="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded-lg">Submit</button>
-          </div>
-        </form>
+            <div class="mb-4">
+              <label class="block text-gray-700 font-semibold">Email</label>
+              <input
+                type="email"
+                name="email"
+                class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500"
+                required
+              />
+            </div>
+
+            <div class="mb-4">
+              <label class="block text-gray-700 font-semibold">Phone</label>
+              <input
+                type="tel"
+                name="phone"
+                class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500"
+                required
+              />
+            </div>
+
+            <input
+              type="hidden"
+              name="_redirect"
+              value="https://yoursite.com/success"
+            />
+
+            <div class="flex justify-between">
+              <button
+                type="button"
+                id="closeBtn"
+                class="text-gray-600 hover:text-gray-800"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                class="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded-lg"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
-  
-  <!-- JavaScript for Popup -->
-  <script>
-    const contactBtn = document.getElementById("contactBtn");
-    const contactForm = document.getElementById("contactForm");
-    const closeBtn = document.getElementById("closeBtn");
-    const formPopup = contactForm.querySelector("div");
-  
-    contactBtn.addEventListener("click", function() {
-      contactForm.classList.remove("invisible", "opacity-0");
-      contactForm.classList.add("opacity-100");
-      formPopup.classList.remove("scale-90");
-      formPopup.classList.add("scale-100");
-    });
-  
-    closeBtn.addEventListener("click", function() {
-      contactForm.classList.add("opacity-0");
-      contactForm.classList.remove("opacity-100");
-      formPopup.classList.add("scale-90");
-      formPopup.classList.remove("scale-100");
-      
-      setTimeout(() => {
-        contactForm.classList.add("invisible");
-      }, 300);
-    });
-  </script>
 
+    <!-- JavaScript for Popup -->
+    <script>
+      const contactBtn = document.getElementById("contactBtn");
+      const contactForm = document.getElementById("contactForm");
+      const closeBtn = document.getElementById("closeBtn");
+      const formPopup = contactForm.querySelector("div");
 
-  
-  
+      contactBtn.addEventListener("click", function () {
+        contactForm.classList.remove("invisible", "opacity-0");
+        contactForm.classList.add("opacity-100");
+        formPopup.classList.remove("scale-90");
+        formPopup.classList.add("scale-100");
+      });
+
+      closeBtn.addEventListener("click", function () {
+        contactForm.classList.add("opacity-0");
+        contactForm.classList.remove("opacity-100");
+        formPopup.classList.add("scale-90");
+        formPopup.classList.remove("scale-100");
+
+        setTimeout(() => {
+          contactForm.classList.add("invisible");
+        }, 300);
+      });
+    </script>
 
     <!-- Footer -->
-<footer class="relative bg-black text-white py-12">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer class="relative bg-black text-white py-12">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
         <!-- Brand Info -->
         <div>
-            <div class="flex items-center space-x-2">
-                <span class="text-2xl">🏆</span>
-                <h3 class="text-xl font-bold">KridaShastra</h3>
-            </div>
-            <p class="text-gray-400 mt-3 text-sm leading-relaxed">
-                Leading sports science equipment provider for government and private institutions across India.
-            </p>
-            <p class="bg-gray-600 rounded-lg px-2 text-gray-200 mt-3 text-sm leading-relaxed">
-                <span class="font-bold">GSTIN:</span> 27AAAPA1234A1Z5
-            </p>
-            
+          <div class="flex items-center space-x-2">
+            <span class="text-2xl">🏆</span>
+            <h3 class="text-xl font-bold">KridaShastra</h3>
+          </div>
+          <p class="text-gray-400 mt-3 text-sm leading-relaxed">
+            Leading sports science equipment provider for government and private
+            institutions across India.
+          </p>
+          <p
+            class="bg-gray-600 rounded-lg px-2 text-gray-200 mt-3 text-sm leading-relaxed"
+          >
+            <span class="font-bold">GSTIN:</span> 27AAAPA1234A1Z5
+          </p>
         </div>
 
         <!-- Quick Links -->
         <div>
-            <h3 class="text-lg font-semibold text-gray-200">Quick Links</h3>
-            <ul class="mt-3 space-y-2 text-gray-400 text-sm">
-                <li><a href="#" class="hover:text-white transition">Home</a></li>
-                <li><a href="#" class="hover:text-white transition">Products</a></li>
-                <li><a href="#" class="hover:text-white transition">Partnerships</a></li>
-                <li><a href="#" class="hover:text-white transition">Contact</a></li>
-            </ul>
+          <h3 class="text-lg font-semibold text-gray-200">Quick Links</h3>
+          <ul class="mt-3 space-y-2 text-gray-400 text-sm">
+            <li><a href="#" class="hover:text-white transition">Home</a></li>
+            <li>
+              <a href="#" class="hover:text-white transition">Products</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-white transition">Partnerships</a>
+            </li>
+            <li><a href="#" class="hover:text-white transition">Contact</a></li>
+          </ul>
         </div>
 
         <!-- Contact Us -->
         <div>
-            <h3 class="text-lg font-semibold text-gray-200">Contact Us</h3>
-            <p class="text-gray-400 text-sm mt-3">
-                KridaShastra Headquarters, <br>
-                Sector 12, Mumbai, Maharashtra <br>
-                India - 400001
-            </p>
-            <p class="text-gray-400 text-sm mt-3 flex items-center">
-                📞 +91 987 654 3210
-            </p>
-            <p class="text-gray-400 text-sm flex items-center">
-                ✉ business@kridashastra.com
-            </p>
+          <h3 class="text-lg font-semibold text-gray-200">Contact Us</h3>
+          <p class="text-gray-400 text-sm mt-3">
+            KridaShastra Headquarters, <br />
+            Sector 12, Mumbai, Maharashtra <br />
+            India - 400001
+          </p>
+          <p class="text-gray-400 text-sm mt-3 flex items-center">
+            📞 +91 987 654 3210
+          </p>
+          <p class="text-gray-400 text-sm flex items-center">
+            ✉ business@kridashastra.com
+          </p>
         </div>
 
         <!-- Business Hours -->
         <div>
-            <h3 class="text-lg font-semibold text-gray-200">Business Hours</h3>
-            <p class="text-gray-400 text-sm mt-3">Monday - Friday:<br> 9:00 AM - 6:00 PM</p>
-            <p class="text-gray-400 text-sm mt-2">Saturday:<br> 10:00 AM - 4:00 PM</p>
-            <p class="text-gray-400 text-sm mt-2">Sunday:<br> Closed</p>
+          <h3 class="text-lg font-semibold text-gray-200">Business Hours</h3>
+          <p class="text-gray-400 text-sm mt-3">
+            Monday - Friday:<br />
+            9:00 AM - 6:00 PM
+          </p>
+          <p class="text-gray-400 text-sm mt-2">
+            Saturday:<br />
+            10:00 AM - 4:00 PM
+          </p>
+          <p class="text-gray-400 text-sm mt-2">
+            Sunday:<br />
+            Closed
+          </p>
         </div>
-    </div>
+      </div>
 
-    <!-- Bottom Section -->
-    <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500 text-sm">
+      <!-- Bottom Section -->
+      <div
+        class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500 text-sm"
+      >
         © 2025 KridaShastra. All rights reserved.
-    </div>
+      </div>
 
-    <!-- Back to Top Button (Outside the max-w-7xl) -->
-    <button id="backToTop" class="hidden absolute top-6 right-6 bg-gray-800 text-white px-5 py-2 rounded-full shadow-lg hover:bg-white hover:text-black transition duration-300">
+      <!-- Back to Top Button (Outside the max-w-7xl) -->
+      <button
+        id="backToTop"
+        class="hidden absolute top-6 right-6 bg-gray-800 text-white px-5 py-2 rounded-full shadow-lg hover:bg-white hover:text-black transition duration-300"
+      >
         ↑ Back to Top
-    </button>
-</footer>
+      </button>
+    </footer>
 
-<script>
-    const backToTopButton = document.getElementById("backToTop");
+    <script>
+      const backToTopButton = document.getElementById("backToTop");
 
-    window.addEventListener("scroll", () => {
+      window.addEventListener("scroll", () => {
         if (window.scrollY > 300) {
-            backToTopButton.classList.remove("hidden");
+          backToTopButton.classList.remove("hidden");
         } else {
-            backToTopButton.classList.add("hidden");
+          backToTopButton.classList.add("hidden");
         }
-    });
+      });
 
-    backToTopButton.addEventListener("click", () => {
+      backToTopButton.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-</script>
-  
-    
-    
+      });
+    </script>
 
-      <!-- JavaScript for Blur + Transparent Effect -->
-      <script>
-        window.addEventListener("scroll", function () {
-          const navbar = document.getElementById("navbar");
-          if (window.scrollY > 50) {
-            navbar.classList.add("scrolled"); // Apply blur + transparency
-          } else {
-            navbar.classList.remove("scrolled"); // Remove effect
-          }
-        });
-      </script>
+    <!-- JavaScript for Blur + Transparent Effect -->
+    <script>
+      window.addEventListener("scroll", function () {
+        const navbar = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled"); // Apply blur + transparency
+        } else {
+          navbar.classList.remove("scrolled"); // Remove effect
+        }
+      });
+    </script>
   </body>
 </html>
