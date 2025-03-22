@@ -215,73 +215,194 @@
   </head>
   <body>
     <!-- ✅ Navbar -->
-<nav class="bg-white shadow-md fixed w-full top-0 z-50 h-20">
-  <div class="container mx-auto px-4 pt-5 md:px-6 flex justify-between items-center h-16">
-    <!-- Left Section -->
-    <div class="flex items-center">
-      <!-- 🍔 Hamburger Menu (Mobile Only) -->
-      <button id="menuToggle" class="md:hidden focus:outline-none p-2">
-        <svg class="h-6 w-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-
-      <!-- 🌟 Logo -->
-      <a href="{% url 'index' %}" class="ml-3">
-        <img src="{% static 'images/krida logo - 2.png' %}" alt="KridaShastra Logo" class="h-12">
-      </a>
-    </div>
-
-    <!-- 📌 Desktop Menu -->
-    <div class="hidden md:flex space-x-6">
-      <a href="{% url 'partnership' %}" class="text-gray-700 hover:text-black">Partnership</a>
-      <a href="{% url 'products' %}" class="text-gray-700 hover:text-black">Products</a>
-      <a href="{% url 'contact' %}" class="text-gray-700 hover:text-black">Contact Us</a>
-    </div>
-
-    <!-- 🔍 Search, Notifications, and Icons -->
-    <div class="flex items-center space-x-4">
-      <!-- 🔍 Search Input (Initially Hidden) -->
-      <div id="searchContainer" class="hidden flex items-center border rounded-lg overflow-hidden">
-        <input type="text" id="searchInput" placeholder="Search..." class="px-3 py-1 border-none focus:outline-none w-40">
-        <button id="searchEnterBtn" class="px-2 text-gray-500 hover:text-blue-500">
-          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m7.49 12-3.75 3.75m0 0 3.75 3.75m-3.75-3.75h16.5V4.499" />
-          </svg>
-        </button>
-      </div>
-
-      <!-- 🔍 Search Icon -->
-      <button id="searchBtn" class="p-2">
-        <svg class="h-6 w-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-        </svg>
-      </button>
-
-      <!-- 🔔 Notification Icon -->
-      <div class="relative">
-        <button id="notificationBtn" class="p-2">
-          <svg class="h-6 w-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-          </svg>
-          <span class="absolute top-0 right-0 bg-red-500 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">!</span>
-        </button>
-
-        <!-- 🔔 Notification Dropdown -->
-        <div id="notificationDropdown" class="hidden absolute right-0 mt-2 w-64 bg-white shadow-md rounded-lg p-4">
-          <p class="text-sm text-gray-700">No new notifications</p>
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50 h-20">
+        <div class="container mx-auto px-4 pt-5 md:px-6 flex justify-between items-center h-16">
+          <!-- Left Section -->
+          <div class="flex items-center">
+            <!-- 🍔 Hamburger Menu (Mobile Only) -->
+            <button id="menuToggle" class="md:hidden focus:outline-none p-2">
+              <svg class="h-6 w-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+            <!-- 🌟 Logo -->
+            <a href="{% url 'index' %}" class="ml-3">
+              <img src="{% static 'images/krida logo - 2.png' %}" alt="Logo" class="h-10">
+            </a>
+          </div>
+          
+          <!-- 📌 Desktop Menu -->
+          <div class="hidden md:flex space-x-5 ml-50">
+            <a href="{% url 'partnership' %}" class="text-gray-700 hover:text-black">Partnership</a>
+            <a href="{% url 'products' %}" class="text-gray-700 hover:text-black">Products</a>
+            <a href="{% url 'contact' %}" class="text-gray-700 hover:text-black">Contact Us</a>
+          </div>
+          
+          <!-- 🔍 Search, Notifications, and Icons -->
+          <div class="flex items-center space-x-4">
+            <!-- 🔍 Search Input (Visible on PC, Hidden on Mobile) -->
+            <div id="searchContainer" class="hidden md:flex items-center border rounded-lg overflow-hidden">
+              <input type="text" id="searchInput" placeholder="Search..." class="px-3 py-1 border-none focus:outline-none w-40">
+              <button id="searchEnterBtn" class="px-2 text-gray-500 hover:text-blue-500">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m7.49 12-3.75 3.75m0 0 3.75 3.75m-3.75-3.75h16.5V4.499" />
+                </svg>
+              </button>
+            </div>
+            
+            <!-- 🔍 Search Icon (Mobile) -->
+            <button id="searchBtn" class="md:hidden p-2">
+              <svg class="h-6 w-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </button>
+            
+            <!-- 🔔 Notification Icon -->
+            <div class="relative">
+              <button id="notificationBtn" class="p-2">
+                <svg class="h-6 w-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                </svg>
+                <span class="absolute top-0 right-0 bg-red-500 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">!</span>
+              </button>
+              
+              <!-- 🔔 Notification Dropdown -->
+              <div id="notificationDropdown" class="hidden absolute right-0 mt-2 w-64 bg-white shadow-md rounded-lg p-4">
+                <p class="text-sm text-gray-700">No new notifications</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
+        
+        <!-- 📱 Mobile Menu (Hidden by Default) -->
+        <div id="mobileMenu" class="hidden bg-white w-full px-6 py-4 absolute top-16 left-0 shadow-md">
+          <a href="{% url 'products' %}" class="block py-2 text-gray-700 hover:text-black">Products</a>
+          <a href="#" class="block py-2 text-gray-700 hover:text-black">Partnership</a>
+          <a href="{% url 'contact' %}" class="block py-2 text-gray-700 hover:text-black">Contact Us</a>
+        </div>
+      </nav>
+      
+      <script>document.addEventListener("DOMContentLoaded", function () {
+        const searchBtn = document.getElementById("searchBtn");
+        const searchContainer = document.getElementById("searchContainer");
+        const searchInput = document.getElementById("searchInput");
+        const searchEnterBtn = document.getElementById("searchEnterBtn");
+      
+        searchBtn.addEventListener("click", function (event) {
+          event.stopPropagation();
+          if (window.innerWidth < 768) {
+            searchContainer.classList.toggle("hidden");
+            searchContainer.classList.toggle("absolute");
+            searchContainer.classList.toggle("top-16");
+            searchContainer.classList.toggle("left-0");
+            searchContainer.classList.toggle("w-full");
+            searchContainer.classList.toggle("bg-white");
+            searchContainer.classList.toggle("shadow-md");
+            searchContainer.classList.toggle("p-3");
+      
+            // Ensure input expands to full width
+            searchInput.classList.add("w-full", "p-2", "text-lg");
+      
+            // Auto-focus on input when opened
+            if (!searchContainer.classList.contains("hidden")) {
+              setTimeout(() => searchInput.focus(), 200);
+            }
+          }
+        });
+      
+        // Close search bar when clicking outside
+        document.addEventListener("click", function (event) {
+          if (!searchContainer.contains(event.target) && !searchBtn.contains(event.target)) {
+            if (window.innerWidth < 768) {
+              searchContainer.classList.add("hidden");
+            }
+          }
+        });
+      
+        // Search functionality
+        searchEnterBtn.addEventListener("click", performSearch);
+        searchInput.addEventListener("keypress", function (event) {
+          if (event.key === "Enter") {
+            performSearch();
+          }
+        });
+      
+        function performSearch() {
+          const query = searchInput.value.trim().toLowerCase();
+          if (!query) return;
+      
+          removePreviousHighlights();
+          
+          const bodyText = document.body.innerText.toLowerCase();
+          
+          if (bodyText.includes(query)) {
+            highlightAndScroll(query);
+          } else {
+            showNoResultsMessage();
+          }
+        }
+      
+        function highlightAndScroll(query) {
+          const regex = new RegExp(`(${query})`, "gi");
+          let firstMatch = null;
+          
+          function replaceText(node) {
+            if (node.nodeType === 3) {
+              const match = node.nodeValue.match(regex);
+              if (match) {
+                const span = document.createElement("span");
+                span.innerHTML = node.nodeValue.replace(
+                  regex,
+                  `<span class="highlight bg-yellow-300 px-1 rounded">${match[0]}</span>`
+                );
+                node.replaceWith(span);
+                
+                if (!firstMatch) {
+                  firstMatch = span; // Store the first occurrence
+                }
+              }
+            } else {
+              node.childNodes.forEach(replaceText);
+            }
+          }
+      
+          document.body.childNodes.forEach(replaceText);
+      
+          if (firstMatch) {
+            firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+        }
+      
+        function removePreviousHighlights() {
+          document.querySelectorAll(".highlight").forEach((el) => {
+            el.replaceWith(document.createTextNode(el.textContent));
+          });
+        }
+      
+        function showNoResultsMessage() {
+          const message = document.createElement("div");
+          message.textContent = "No results found.";
+          message.classList.add(
+            "fixed",
+            "top-16",
+            "right-4",
+            "bg-red-500",
+            "text-white",
+            "px-4",
+            "py-2",
+            "rounded",
+            "shadow-md"
+          );
+          document.body.appendChild(message);
+      
+          setTimeout(() => message.remove(), 3000);
+        }
+      });
+      
 
-  <!-- 📱 Mobile Menu (Hidden by Default) -->
-  <div id="mobileMenu" class="hidden bg-white w-full px-6 py-4 absolute top-16 left-0 shadow-md">
-    <a href="{% url 'products' %}" class="block py-2 text-gray-700 hover:text-black">Products</a>
-    <a href="{% url 'partnership' %}" class="block py-2 text-gray-700 hover:text-black">Partnership</a>
-    <a href="{% url 'contact' %}" class="block py-2 text-gray-700 hover:text-black">Contact Us</a>
-  </div>
-</nav>
+
+      </script>
+      
 
 
     <!-- ✅ JavaScript -->
@@ -311,10 +432,7 @@
           }
         });
 
-        // 🔍 Toggle Search Box
-        searchBtn.addEventListener("click", function () {
-          searchContainer.classList.toggle("hidden");
-        });
+
 
         // 🔔 Toggle Notifications Dropdown
         notificationBtn.addEventListener("click", function () {
@@ -564,16 +682,5 @@
       });
     </script>
 
-    <!-- JavaScript for Blur + Transparent Effect -->
-    <script>
-      window.addEventListener("scroll", function () {
-        const navbar = document.getElementById("navbar");
-        if (window.scrollY > 50) {
-          navbar.classList.add("scrolled"); // Apply blur + transparency
-        } else {
-          navbar.classList.remove("scrolled"); // Remove effect
-        }
-      });
-    </script>
   </body>
 </html>

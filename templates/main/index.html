@@ -178,28 +178,28 @@ clear. We want to transform sports performance using science.
         <div class="relative group overflow-hidden rounded-lg shadow-lg min-w-[23%]" data-aos="fade-up">
             <img src="{% static 'images/sprotscience_prod/FORCEDECKS-FORCE-PLATFORMS.jpg' %}" alt="FORCEDECKS" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <h3 class="text-white text-lg font-semibold">Running Shoes</h3>
-            <p class="text-white text-sm mt-2">$49.99</p>
+            <h3 class="text-white text-lg font-semibold">Force Plates</h3>
+            <p class="text-white text-sm mt-2">Measuring ground reaction forces.</p>
           </div>
         </div>
  
         <div class="relative group overflow-hidden rounded-lg shadow-lg min-w-[23%]" data-aos="fade-up" data-aos-delay="100">
             <img src="{% static 'images/sports-biomechanics-1.jpg' %}" alt="FORCEDECKS" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <h3 class="text-white text-lg font-semibold">Luxury Watch</h3>
-            <p class="text-white text-sm mt-2">$199.99</p>
+            <h3 class="text-white text-lg font-semibold">Motion Capture Systems</h3>
+            <p class="text-white text-sm mt-2">Biomechanical analysis.</p>
           </div>
         </div>
  
-        <!-- <div class="relative group overflow-hidden rounded-lg shadow-lg min-w-[23%]" data-aos="fade-up" data-aos-delay="200">
-          <img src="https://source.unsplash.com/400x300/?headphones" alt="Product" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
+        <div class="relative group overflow-hidden rounded-lg shadow-lg min-w-[23%]" data-aos="fade-up" data-aos-delay="200">
+          <img src="{% static 'images/wearable sensor.png' %}" alt="wearable sensor" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <h3 class="text-white text-lg font-semibold">Wireless Headphones</h3>
-            <p class="text-white text-sm mt-2">$99.99</p>
+            <h3 class="text-white text-lg font-semibold">Wearable Sensors</h3>
+            <p class="text-white text-sm mt-2">Real-time performance monitoring.</p>
           </div>
         </div>
  
-        <div class="relative group overflow-hidden rounded-lg shadow-lg min-w-[23%]" data-aos="fade-up" data-aos-delay="300">
+        <!-- <div class="relative group overflow-hidden rounded-lg shadow-lg min-w-[23%]" data-aos="fade-up" data-aos-delay="300">
           <img src="https://source.unsplash.com/400x300/?backpack" alt="Product" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <h3 class="text-white text-lg font-semibold">Travel Backpack</h3>
@@ -489,11 +489,21 @@ clear. We want to transform sports performance using science.
 </div>
 
 
-<section class="krida-rotating-section flex flex-col items-center justify-center h-[60vh] bg-gray-100">
-    <!-- Heading -->
-    <h2 class="krida-heading text-2xl font-bold text-gray-800 mb-6">Case Studies: Success Stories</h2>
+<section class="krida-rotating-section relative flex flex-col items-center justify-center h-[60vh] bg-gray-100 overflow-hidden">
+    <!-- Background Images -->
+    <div class="absolute inset-0 flex">
+        <img src="{% static 'images/success.jpg' %}" class="w-1/4 h-full opacity-30 object-cover" />
+        <img src="{% static 'images/data driven.jpg' %}" class="w-1/4 h-full opacity-30 object-cover" />
+        <img src="{% static 'images/endorsment.jpg' %}" class="w-1/4 h-full opacity-30 object-cover" />
+        <img src="{% static 'images/hockey team.jpg' %}" class="w-1/4 h-full opacity-30 object-cover" />
+    </div>
 
-    <div class="krida-card-container relative w-full max-w-2xl h-[350px] flex justify-center items-center perspective-1000">
+    <!-- Content -->
+    <h2 class="krida-heading text-2xl font-bold text-gray-800 mb-6 relative z-10">
+        Case Studies: Success Stories
+    </h2>
+
+    <div class="krida-card-container relative w-full max-w-2xl h-[350px] flex justify-center items-center perspective-1000 z-10">
         {% for card in card_data %}
         <div class="krida-card absolute w-[350px] h-[320px] bg-white rounded-2xl shadow-xl p-6 flex flex-col justify-center items-center text-center transition-all duration-[3000ms] ease-[cubic-bezier(0.4, 0, 0.2, 1)]">
             <h1 class="krida-card-title bg-black rounded-2xl m-4 py-4 px-6 text-xl text-white font-bold">{{ card.slno }}</h1>
@@ -503,6 +513,8 @@ clear. We want to transform sports performance using science.
         {% endfor %}
     </div>
 </section>
+
+
 
 
 <script>
