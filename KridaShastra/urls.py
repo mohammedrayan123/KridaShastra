@@ -25,7 +25,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     
     # About Page
-    path('about/', views.about, name='about'),
+    path('school/', views.school, name='school'),
     
     # Services Page
     path('services/', views.services, name='services'),

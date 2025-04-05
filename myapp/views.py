@@ -9,8 +9,8 @@ def index(request):
     return render(request, "main/index.html", {"card_data": card_data})
 
 
-def about(request):
-    return render(request, 'main/about.html')
+def school(request):
+    return render(request, 'main/school.html')
 
 def services(request):
     return render(request, 'main/services.html')
