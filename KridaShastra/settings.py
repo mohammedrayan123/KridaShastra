@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-g+de)j^!#)em^c%p&cr6zvh#wao(&4!mygu#9$u6bhg#-bzkdv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['kridasashtra.com', 'www.kridasashtra.com', '185.199.53.247']
+ALLOWED_HOSTS = ['kridasashtra.com', 'www.kridasashtra.com', '185.199.53.247', '*']
 
 
 
@@ -119,12 +119,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # 👈 Add this line
 
-# Optional if you use custom static folders:
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
+if DEBUG:
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'static'),
+    ]
+else:
+    STATIC_ROOT = '/var/www/kridashastra/static/'  # Adjusted for production
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
