@@ -15,9 +15,9 @@
        <!-- Left-aligned sports categories -->
        <div class="flex">
           <a href="{% url 'products' %}#CTsports" class="hover:bg-gray-600 px-4 text-center py-3">SPORTS SCIENCE</a>
-          <a href="#" class="hover:bg-gray-600 px-4 text-center py-3">PERFORMANCE RECOVERY</a>
-          <a href="#" class="hover:bg-gray-600 px-4 text-center py-3">REHABILITATION</a>
-          <a href="#" class="hover:bg-gray-600 px-4 text-center py-3">ACCESSORIES</a>
+          <a href="{% url 'products' %}" class="hover:bg-gray-600 px-4 text-center py-3">PERFORMANCE RECOVERY</a>
+          <!-- <a href="#" class="hover:bg-gray-600 px-4 text-center py-3">REHABILITATION</a> -->
+          <a href="{% url 'products' %}" class="hover:bg-gray-600 px-4 text-center py-3">ACCESSORIES</a>
           <!-- <a href="#" class="hover:bg-gray-600 px-4 text-center py-3">RUGBY</a>
           <a href="#" class="hover:bg-gray-600 px-4 text-center py-3">GYM & FITNESS</a>
           <a href="#" class="hover:bg-gray-600 px-4 text-center py-3">ALL SPORTS</a> -->
@@ -25,7 +25,7 @@
 
        <!-- Download button on the right -->
        <div class="ml-auto flex items-center">
-          <a href="document.pdf" download class="bg-green-600 text-white flex items-center gap-2 px-6 py-2 rounded-md hover:bg-green-700 transition">
+          <a href="{% static 'images/KridaShastra_Brochure.pdf' %}" download class="bg-green-600 text-white flex items-center gap-2 px-6 py-2 rounded-md hover:bg-green-700 transition">
              <!-- SVG Icon -->
              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
@@ -82,7 +82,7 @@
             
             <!-- Download Brochure Button - only visible on mobile -->
             <div class="ml-auto flex justify-center items-center sm:hidden">
-                <a href="document.pdf" download class="bg-green-600 text-white flex items-center gap-2 px-6 py-2 rounded-md hover:bg-green-700 transition">
+                <a href="{% static 'images/KridaShastra_Brochure.pdf' %}" download class="bg-green-600 text-white flex items-center gap-2 px-6 py-2 rounded-md hover:bg-green-700 transition">
                     <!-- SVG Icon -->
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
@@ -316,7 +316,7 @@
     </video>
 
     <!-- Dark Overlay -->
-    <!-- <div class="absolute inset-0 bg-black bg-opacity-50"></div> -->
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
 
     <!-- Text Content -->
     <div class="relative z-10 max-w-2xl text-gray-200 text-left sm:pl-24 pl-2"
