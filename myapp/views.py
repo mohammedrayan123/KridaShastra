@@ -53,14 +53,6 @@ def request_info(request):
         return HttpResponse("<h2>Thanks! Your request has been submitted.</h2><a href='/'>Back</a>")
 
 def contact(request):
-    return render(request, 'main/contact.html')
-
-
-from django.shortcuts import render, redirect
-from django.core.mail import send_mail
-from django.contrib import messages
-
-def contact_view(request):
     if request.method == 'POST':
         name = request.POST.get('name')
         email = request.POST.get('email')
@@ -88,10 +80,10 @@ def contact_view(request):
             fail_silently=False,
         )
 
-        messages.success(request, "Thank you! Your inquiry has been submitted.")
-        return redirect(request.path)
+        return redirect('thank_you')  # Redirects to /thank-you/
 
-    return render(request, 'contact.html')
+    return render(request, 'main/contact.html')
+
 
 
 def submit_contact(request):
