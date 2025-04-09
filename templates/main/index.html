@@ -47,26 +47,53 @@
 <!-- Hero here -->
 <div class="hero min-h-[65vh] relative overflow-hidden">
     <!-- Background Video -->
-    <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline>
+    <!-- <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline>
         <source src="https://videos.pexels.com/video-files/6390166/6390166-sd_640_360_25fps.mp4" type="video/mp4">
         Your browser does not support the video tag.
-    </video>
+    </video> -->
 
     <!-- Dark Overlay -->
     <div class="absolute inset-0 bg-black bg-opacity-50"></div>
 
     <!-- Content -->
     <div class="hero-content text-neutral-content text-center relative z-10">
-        <div class="max-w-7xl">
-            <h1 class="mb-5 text-5xl font-bold">KTEST</h1>
-            <p class="mb-5">
-                Krida Shastra is revolutionizing sports in India. We are a leading provider of
-sports science equipment and solutions. Based in Pune, India, our mission is
-clear. We want to transform sports performance using science.
+        <div class="max-w-7xl mx-auto px-4">
+           
+    
+            <!-- Heading and Paragraph -->
+            <h1 class="mb-5 text-3xl font-bold text-black">Kridasashtra: Pioneering Sports Science in India</h1>
+            <p class="mb-5 text-black">
+                
             </p>
-            <button class="btn btn-secondary">Get Started</button>
+            <p class="mt-4 mb-5 text-black text-base">
+                Kridasashtra is revolutionizing sports in India. We are a leading provider of
+                sports science equipment and solutions. Based in Maharashtra, India, our mission is
+                clear. We want to transform sports performance using science.
+            </p>
+            
+            <!-- Mobile Shorter Text -->
+            <p class="mt-4 text-sm sm:hidden">
+            </p>
+
+             <!-- Logo -->
+             <div class="hidden md:flex justify-center mb-4">
+                <img src="{% static 'images/krida logo - 2.png' %}" alt="Kridasashtra Logo" class="h-20">
+            </div>
+            
+    
+            <!-- Download Brochure Button - only visible on mobile -->
+            <div class="ml-auto flex justify-center items-center sm:hidden">
+                <a href="document.pdf" download class="bg-green-600 text-white flex items-center gap-2 px-6 py-2 rounded-md hover:bg-green-700 transition">
+                    <!-- SVG Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+                    Download Brochure
+                </a>
+            </div>
         </div>
     </div>
+    
 </div> 
 
 
@@ -79,40 +106,31 @@ clear. We want to transform sports performance using science.
 
 <!-- Features Section -->
 <section class="bg-gray-100 py-2 w-full mb-4">
-
-    <div class="max-w-7xl mx-auto px-4 mt-4 flex items-center gap-8">
+    <div class="max-w-7xl mx-auto px-4 mt-4 flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8">
+  
         <!-- Left Section (Title & Description) -->
-        <div class="w-1/3">
-          <h2 class="text-2xl font-bold text-gray-800">Elevating Athletic Performance</h2>
-          <p class="mt-2 text-gray-600">Collaborating with top leagues to enhance athlete performance and drive excellence.</p>
+        <div class="w-full sm:w-1/3 text-center sm:text-left">
+          <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Elevating Athletic Performance</h2>
+          <p class="mt-2 text-gray-600 text-base sm:text-lg">
+            Collaborating with top leagues to enhance athlete performance and drive excellence.
+          </p>
         </div>
-
-
-        <div class="h-32 border-l border-gray-300"></div>
-
-
-         <!-- Right Section (Carousel) -->
-        <div class="w-2/3">
-          <div class="carousel rounded-box space-x-4">
-            <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
-              <img class="h-40 w-full rounded-lg" src="{% static 'images/Indian Premier League logo.svg' %}"  alt="ipl logo" />
-            </div>
-            
-            <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
-              <img class="h-40 w-full rounded-lg" src="{% static 'images/Indian_Super_League_logo.svg' %}" alt="Indian_Super_League_logo" />
-            </div>
-            <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
-              <img class="h-40 w-full rounded-lg" src="{% static 'images/Hockey_India_Logo.svg' %}" alt="Hockey_India_Logo" />
-            </div>
-            <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
-             <img class="h-30 w-90 rounded-lg" src="{% static 'images/pro-kabaddi.png' %}" alt="pro-kabaddi" />
-           </div>
-            <!-- <div class="carousel-item w-1/3 transition-transform duration-500 ease-in-out">
-              <img class="h-40 w-full rounded-lg" src="{% static 'images/Indian Premier League logo.svg' %}" alt="Image 5" />
-            </div> -->
+      
+        <!-- Divider -->
+        <div class="hidden sm:block h-32 border-l border-gray-300"></div>
+      
+        <!-- Right Section (Logos) -->
+        <div class="w-full sm:w-2/3">
+          <div class="flex flex-wrap justify-center sm:justify-start gap-6">
+            <img class="h-16 sm:h-20 md:h-24 w-auto" src="{% static 'images/Indian Premier League logo.svg' %}" alt="IPL Logo" />
+            <img class="h-16 sm:h-28 md:h-32 w-auto" src="{% static 'images/Indian_Super_League_logo.svg' %}" alt="ISL Logo" />
+            <img class="h-16 sm:h-28 md:h-32 w-auto" src="{% static 'images/Hockey_India_Logo.svg' %}" alt="Hockey India" />
+            <img class="h-16 sm:h-20 md:h-24 w-auto" src="{% static 'images/pro-kabaddi.png' %}" alt="Pro Kabaddi" />
           </div>
         </div>
+      
       </div>
+      
 
      
 
@@ -157,87 +175,110 @@ clear. We want to transform sports performance using science.
 
 <!-- Product Container with "View All" Button -->
 <div class="max-w-[1200px] mx-auto px-4 py-10 relative">
+    <!-- Heading & Arrows -->
     <div class="flex justify-between items-center mb-6">
       <h2 class="text-2xl font-bold">Featured Products</h2>
       <div class="flex gap-4">
-        <button id="prev" class="text-gray-500 hover:text-black transition">
-          ←
-        </button>
-        <button id="next" class="text-gray-500 hover:text-black transition">
-          →
-        </button>
+        <button id="prev" class="text-gray-500 hover:text-black transition">←</button>
+        <button id="next" class="text-gray-500 hover:text-black transition">→</button>
       </div>
     </div>
-    
-    <!-- Product Carousel -->
+  
+    <!-- Carousel Wrapper -->
     <div class="overflow-hidden relative">
-      <div id="carousel" class="flex gap-6 transition-transform duration-500 w-full" style="transform: translateX(0);">
-       
-        <!-- Product Cards -->
-        <div class="relative group overflow-hidden rounded-lg shadow-lg min-w-[23%]" data-aos="fade-up">
-            <img src="{% static 'images/sprotscience_prod/FORCEDECKS-FORCE-PLATFORMS.jpg' %}" alt="FORCEDECKS" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
-          <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <h3 class="text-white text-lg font-semibold">Force Plates</h3>
-            <p class="text-white text-sm mt-2">Measuring ground reaction forces.</p>
+      <div
+        id="carousel"
+        class="flex gap-6 transition-transform duration-500 w-full"
+        style="transform: translateX(0);"
+      >
+        <!-- Product Card -->
+        <div
+          class="relative group overflow-hidden rounded-lg shadow-lg min-w-[70%] sm:min-w-[23%]"
+          data-aos="fade-up"
+        >
+          <img
+            src="{% static 'images/sprotscience_prod/FORCEDECKS-FORCE-PLATFORMS.jpg' %}"
+            alt="FORCEDECKS"
+            class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110"
+          />
+          <!-- Desktop Hover Content -->
+          <div
+            class="hidden sm:flex absolute inset-0 bg-black bg-opacity-50 justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <div class="text-center">
+              <h3 class="text-white text-lg font-semibold">Force Plates</h3>
+              <p class="text-white text-sm mt-2">Measuring ground reaction forces.</p>
+            </div>
+          </div>
+          <!-- Mobile Always Visible Title -->
+          <div class="block sm:hidden absolute bottom-0 w-full bg-black bg-opacity-60 text-white p-2 text-center">
+            <h3 class="text-sm font-semibold">Force Plates</h3>
           </div>
         </div>
- 
-        <div class="relative group overflow-hidden rounded-lg shadow-lg min-w-[23%]" data-aos="fade-up" data-aos-delay="100">
-            <img src="{% static 'images/sports-biomechanics-1.jpg' %}" alt="FORCEDECKS" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
-            <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h3 class="text-white text-lg font-semibold">Motion Capture Systems</h3>
-            <p class="text-white text-sm mt-2">Biomechanical analysis.</p>
+  
+        <!-- Repeat the same structure for other products -->
+        <div
+          class="relative group overflow-hidden rounded-lg shadow-lg min-w-[70%] sm:min-w-[23%]"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <img
+            src="{% static 'images/sports-biomechanics-1.jpg' %}"
+            alt="Motion Capture"
+            class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110"
+          />
+          <div
+            class="hidden sm:flex absolute inset-0 bg-black bg-opacity-50 justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <div class="text-center">
+              <h3 class="text-white text-lg font-semibold">Motion Capture Systems</h3>
+              <p class="text-white text-sm mt-2">Biomechanical analysis.</p>
+            </div>
+          </div>
+          <div class="block sm:hidden absolute bottom-0 w-full bg-black bg-opacity-60 text-white p-2 text-center">
+            <h3 class="text-sm font-semibold">Motion Capture</h3>
           </div>
         </div>
- 
-        <div class="relative group overflow-hidden rounded-lg shadow-lg min-w-[23%]" data-aos="fade-up" data-aos-delay="200">
-          <img src="{% static 'images/wearable sensor.png' %}" alt="wearable sensor" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
-          <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <h3 class="text-white text-lg font-semibold">Wearable Sensors</h3>
-            <p class="text-white text-sm mt-2">Real-time performance monitoring.</p>
+  
+        <div
+          class="relative group overflow-hidden rounded-lg shadow-lg min-w-[70%] sm:min-w-[23%]"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <img
+            src="{% static 'images/wearable sensor.png' %}"
+            alt="Wearable Sensor"
+            class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110"
+          />
+          <div
+            class="hidden sm:flex absolute inset-0 bg-black bg-opacity-50 justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <div class="text-center">
+              <h3 class="text-white text-lg font-semibold">Wearable Sensors</h3>
+              <p class="text-white text-sm mt-2">Real-time performance monitoring.</p>
+            </div>
+          </div>
+          <div class="block sm:hidden absolute bottom-0 w-full bg-black bg-opacity-60 text-white p-2 text-center">
+            <h3 class="text-sm font-semibold">Wearable Sensors</h3>
           </div>
         </div>
- 
-        <!-- <div class="relative group overflow-hidden rounded-lg shadow-lg min-w-[23%]" data-aos="fade-up" data-aos-delay="300">
-          <img src="https://source.unsplash.com/400x300/?backpack" alt="Product" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
-          <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <h3 class="text-white text-lg font-semibold">Travel Backpack</h3>
-            <p class="text-white text-sm mt-2">$79.99</p>
-          </div>
-        </div>
- 
-        <div class="relative group overflow-hidden rounded-lg shadow-lg min-w-[23%]" data-aos="fade-up" data-aos-delay="400">
-          <img src="https://source.unsplash.com/400x300/?smartphone" alt="Product" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
-          <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <h3 class="text-white text-lg font-semibold">Smartphone</h3>
-            <p class="text-white text-sm mt-2">$699.99</p>
-          </div>
-        </div>
- 
-        <div class="relative group overflow-hidden rounded-lg shadow-lg min-w-[23%]" data-aos="fade-up" data-aos-delay="500">
-          <img src="https://source.unsplash.com/400x300/?camera" alt="Product" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110">
-          <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <h3 class="text-white text-lg font-semibold">Digital Camera</h3>
-            <p class="text-white text-sm mt-2">$499.99</p>
-          </div>
-        </div> -->
- 
       </div>
     </div>
   </div>
+  
 
 
 
   <div class="max-w-7xl mx-auto p-6">
-    <h2 class="text-2xl font-bold text-center mb-6">Krida Shastra Overview</h2>
+    <h2 class="text-2xl font-bold text-center mb-6">Kridasashtra Overview</h2>
 
     <!-- Steps Progress Bar -->
     <div class="flex justify-center mb-2">
         <ul class="steps steps-horizontal w-full max-w-7xl">
-            <li class="step step-primary">|</li>
-            <li class="step step-primary">|</li>
-            <li class="step step-primary">|</li>
-            <li class="step step-primary">|</li>
+            <li class="step step-primary"></li>
+            <li class="step step-primary"></li>
+            <li class="step step-primary"></li>
+            <li class="step step-primary"></li>
         </ul>
     </div>
 
@@ -257,7 +298,7 @@ clear. We want to transform sports performance using science.
         </div>
         <div class="border border-gray-200 p-4 rounded-lg shadow-lg">
             <h3 class="text-lg font-semibold text-gray-900">Valuation</h3>
-            <p class="text-gray-600 text-sm mt-2">Currently valued at ₹12 Cr.</p>
+            <p class="text-gray-600 text-sm mt-2">Currently valued at <span class="font-bold">₹12 Cr</span>.</p>
         </div>
     </div>
 </div>
@@ -268,27 +309,35 @@ clear. We want to transform sports performance using science.
 
 
 
-<div class="relative w-full h-[80vh] bg-cover bg-center flex items-center justify-start px-16">
+<div class="relative w-full h-[80vh] bg-cover bg-center flex items-center justify-start px-6 sm:px-16">
     <!-- Background Video -->
     <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
         <source src="{% static '/images/6540601-uhd_2560_1440_25fps.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
-    <!-- Dark Overlay (Darker for Contrast) -->
+    <!-- Dark Overlay -->
     <div class="absolute inset-0 bg-black bg-opacity-50"></div>
 
     <!-- Text Content -->
-    <div class="relative z-10 max-w-2xl text-gray-200 text-left pl-24"
+    <div class="relative z-10 max-w-2xl text-gray-200 text-left sm:pl-24 pl-2"
         data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
-        <h1 class="text-6xl font-bold">About Us</h1>
-        <h2 class="text-2xl mt-2">KRIDASHASTRA</h2>
-        <p class="mt-4 text-lg">
-            KridaShastra is a pioneering sports science company dedicated to identifying and nurturing young athletic talent for international sports. Collaborating with India's premium sports leagues, we provide advanced assessments for school-going athletes, leveraging cutting-edge sports science methodologies. Our expertise lies in delivering state-of-the-art sports science equipment and solutions that enhance performance, recovery, and overall athletic development. With a mission to revolutionize sports training and talent identification, KridaShastra bridges the gap between raw potential and professional excellence, ensuring that young athletes receive world-class guidance to compete at the highest levels.
-        </p>
+        <h1 class="text-4xl sm:text-6xl font-bold leading-tight">About Us</h1>
+        <h2 class="text-xl sm:text-2xl mt-2">KRIDASASHTRA</h2>
+<!-- Desktop / Tablet Full Text -->
+<p class="mt-4 text-base sm:text-lg hidden sm:block">
+    Kridasashtra is a pioneering sports science company dedicated to identifying and nurturing young athletic talent for international sports. Collaborating with India's premium sports leagues, we provide advanced assessments for school-going athletes, leveraging cutting-edge sports science methodologies. Our expertise lies in delivering state-of-the-art sports science equipment and solutions that enhance performance, recovery, and overall athletic development. With a mission to revolutionize sports training and talent identification, Kridasashtra bridges the gap between raw potential and professional excellence, ensuring that young athletes receive world-class guidance to compete at the highest levels.
+</p>
 
+<!-- Mobile Shorter Text -->
+<p class="mt-4 text-sm sm:hidden">
+    Kridasashtra pioneers sports science in India, helping identify and train young athletes for global competition. We offer expert assessments, training tools, and recovery solutions to elevate athletic performance from an early age.
+</p>
+
+        
     </div>
 </div>
+
 
 
 
@@ -305,25 +354,25 @@ clear. We want to transform sports performance using science.
     <div class="flex flex-wrap justify-center gap-6 w-full">
         <!-- Stat Card 1 -->
         <div class="bg-white p-6 rounded-2xl text-center shadow-lg flex-1 min-w-[150px] sm:min-w-[180px] md:min-w-[200px] lg:min-w-[250px]">
-            <h3 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600 counter" data-count="36739">0</h3>
+            <h3 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600 counter" data-count="1567">0</h3>
             <p class="text-gray-700 text-base sm:text-lg mt-2">Happy Customers</p>
         </div>
 
         <!-- Stat Card 2 -->
         <div class="bg-white p-6 rounded-2xl text-center shadow-lg flex-1 min-w-[150px] sm:min-w-[180px] md:min-w-[200px] lg:min-w-[250px]">
-            <h3 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600 counter" data-count="2397">0</h3>
+            <h3 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600 counter" data-count="348">0</h3>
             <p class="text-gray-700 text-base sm:text-lg mt-2">Products Sold</p>
         </div>
 
         <!-- Stat Card 3 -->
         <div class="bg-white p-6 rounded-2xl text-center shadow-lg flex-1 min-w-[150px] sm:min-w-[180px] md:min-w-[200px] lg:min-w-[250px]">
-            <h3 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600 counter" data-count="86">0</h3>
+            <h3 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600 counter" data-count="29">0</h3>
             <p class="text-gray-700 text-base sm:text-lg mt-2">Partners</p>
         </div>
 
         <!-- Stat Card 4 -->
         <div class="bg-white p-6 rounded-2xl text-center shadow-lg flex-1 min-w-[150px] sm:min-w-[180px] md:min-w-[200px] lg:min-w-[250px]">
-            <h3 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600 counter" data-count="38">0</h3>
+            <h3 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600 counter" data-count="11">0</h3>
             <p class="text-gray-700 text-base sm:text-lg mt-2">States Reached</p>
         </div>
     </div>
@@ -337,7 +386,7 @@ clear. We want to transform sports performance using science.
 
 <div class="bg-white min-h-[55vh] flex flex-col justify-center items-center px-6">
     <!-- Heading -->
-    <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">
+    <h2 class="text-3xl font-bold text-gray-900 text-center my-12">
         Driving Innovation in Sports Science
     </h2>
 
@@ -392,7 +441,7 @@ clear. We want to transform sports performance using science.
                 </div>
                 <div>
                     <h2 class="font-bold text-gray-800">Sponsorship</h2>
-                    <p class="text-gray-600 text-sm">Sponsoring research grants worth $100,000 annually.</p>
+                    <p class="text-gray-600 text-sm">Sponsoring research grants worth ₹100,000 annually.</p>
                 </div>
             </div>
         </div>
@@ -407,7 +456,7 @@ clear. We want to transform sports performance using science.
 
 
 
-<div class="w-full min-h-screen bg-gray-900 flex flex-col justify-center items-center text-white px-6 mt-8">
+<div class="w-full min-h-screen bg-gray-900 flex flex-col justify-center items-center text-white px-3 mt-8">
 
     <!-- Section Title -->
     <h2 class="text-3xl font-bold text-white text-center my-10">
@@ -415,7 +464,7 @@ clear. We want to transform sports performance using science.
     </h2>
 
     <!-- Content Wrapper -->
-    <div class="max-w-7xl mx-auto p-6 flex flex-col md:flex-row items-start gap-10">
+    <div class="max-w-7xl mx-auto p-4 flex flex-col md:flex-row items-start gap-10">
 
         <!-- Left Section -->
         <div class="relative flex-1">
@@ -441,22 +490,28 @@ clear. We want to transform sports performance using science.
                     </div>
                 </div>
             </div>
-            <!-- Image Below, Aligned Properly -->
-            <div class="mt-4 w-full h-60 flex justify-center">
-                <img src="{% static 'images/School sports.jpg' %}" alt="School sports" class="mr-35 rounded-lg shadow-lg w-3/4">
+
+            <!-- Image Below with Responsive Sizes -->
+            <div class="mt-4 w-full flex justify-center md:justify-start">
+                <img src="{% static 'images/School sports.jpg' %}" 
+                     alt="School sports" 
+                     class="rounded-lg shadow-lg w-60 h-32 sm:w-72 sm:h-40 md:w-[22rem] md:h-60 object-cover">
             </div>
         </div>
 
         <!-- Divider -->
-        <div class="hidden md:block w-[1px] bg-gray-600 h-175"></div>
+        <div class="hidden md:block w-[1px] bg-gray-600 h-[44rem]"></div>
 
         <!-- Right Section -->
         <div class="flex-1 text-right">
             <!-- Image on Top -->
-            <div class="w-full flex justify-center">
-                <img src="{% static 'images/future olympics.png' %}" alt="future olympics" class="mb-6 ml-35 rounded-lg shadow-lg w-3/4">
+            <div class="w-full flex justify-center md:justify-end">
+                <img src="{% static 'images/future olympics.png' %}" 
+                     alt="future olympics" 
+                     class="mb-6 rounded-lg shadow-lg w-3/4 md:w-[22rem] object-cover">
             </div>
-            <!-- Content Below -->
+
+            <!-- Content Box -->
             <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
                 <h2 class="text-2xl font-bold">Preparing Future Olympians</h2>
                 <div class="mt-4 space-y-3">
@@ -483,6 +538,7 @@ clear. We want to transform sports performance using science.
     </div>
 
 </div>
+
 
 
 <section class="krida-rotating-section relative flex flex-col items-center justify-center h-[60vh] bg-gray-100 overflow-hidden">
@@ -581,28 +637,28 @@ clear. We want to transform sports performance using science.
         </div>
 
         <!-- Featured Partner Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 justify-center gap-6 mb-10">
-            <!-- Partner 1 -->
-            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 bg-gray-100 w-full h-65 flex flex-col items-center">
-                <div class="w-full h-1/2 flex justify-center items-center">
-                    <img src="{% static 'images/kangatech.png' %}" alt="kangatech" class="h-4/5">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-6 mb-10 px-4">
+            <!-- Partner Card -->
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 bg-gray-100 w-full flex flex-col items-center">
+                <div class="w-full flex justify-center items-center">
+                    <img src="{% static 'images/kangatech.png' %}" alt="kangatech" class="h-20 object-contain">
                 </div>
-                <div class="text-center my-4">
+                <div class="text-center mt-4">
                     <h3 class="text-lg font-bold text-black">KangaTech</h3>
-                    <p class="text-gray-600 text-sm mt-2">
+                    <p class="text-gray-600 text-sm mt-2 break-words">
                         KangaTech offers cutting-edge isometric strength testing and training solutions, focusing on measuring neuromuscular strength and mitigating injury risks for elite athletes.
                     </p>
                 </div>
             </div>
-
-            <!-- Partner 2 -->
-            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 bg-gray-100 w-full h-65 flex flex-col items-center">
-                <div class="w-full h-1/2 flex justify-center items-center">
-                    <img src="{% static 'images/ksport-logo-bar.png' %}" alt="ksport-logo-bar" class="h-4/5 bg-gray-800 p-3 m-4">
+        
+            <!-- Partner Card -->
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 bg-gray-100 w-full flex flex-col items-center">
+                <div class="w-full bg-black flex justify-center items-center px-2">
+                    <img src="{% static 'images/ksport-logo-bar.png' %}" alt="ksport-logo-bar" class="h-20 object-contain">
                 </div>
-                <div class="text-center my-4">
+                <div class="text-center mt-4">
                     <h3 class="text-lg font-bold text-black">K-Sport</h3>
-                    <p class="text-gray-600 text-sm mt-2">
+                    <p class="text-gray-600 text-sm mt-2 break-words">
                         K-Sport specializes in advanced sports technology and AI-driven performance analysis tools, including wearable devices and optical tracking systems, to monitor and enhance athletic performance.
                     </p>
                 </div>
@@ -615,7 +671,7 @@ clear. We want to transform sports performance using science.
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="bg-gray-100 p-6 rounded-lg shadow-md">
                 <p class="italic text-gray-600">
-                    "KridaShastra has been an invaluable partner in setting up our state-of-the-art training facilities across multiple centers."
+                    "Kridasashtra has been an invaluable partner in setting up our state-of-the-art training facilities across multiple centers."
                 </p>
                 <h3 class="text-lg font-bold text-black mt-4">Sports Authority of India</h3>
                 <p class="text-gray-500 text-sm">Government Institute</p>
@@ -623,7 +679,7 @@ clear. We want to transform sports performance using science.
 
             <div class="bg-gray-100 p-6 rounded-lg shadow-md">
                 <p class="italic text-gray-600">
-                    "The quality and reliability of KridaShastra's equipment have significantly enhanced our athlete training and research capabilities."
+                    "The quality and reliability of Kridasashtra's equipment have significantly enhanced our athlete training and research capabilities."
                 </p>
                 <h3 class="text-lg font-bold text-black mt-4">National Institute of Sports</h3>
                 <p class="text-gray-500 text-sm">Government Training Center</p>
@@ -631,7 +687,7 @@ clear. We want to transform sports performance using science.
 
             <div class="bg-gray-100 p-6 rounded-lg shadow-md">
                 <p class="italic text-gray-600">
-                    "KridaShastra's professional approach and top-tier equipment have been crucial in our preparation for international competitions."
+                    "Kridasashtra's professional approach and top-tier equipment have been crucial in our preparation for international competitions."
                 </p>
                 <h3 class="text-lg font-bold text-black mt-4">Indian Olympic Association</h3>
                 <p class="text-gray-500 text-sm">Sports Governing Body</p>
@@ -639,7 +695,7 @@ clear. We want to transform sports performance using science.
 
             <div class="bg-gray-100 p-6 rounded-lg shadow-md">
                 <p class="italic text-gray-600">
-                    "Our sports science laboratories powered by KridaShastra equipment provide our students with industry-leading training experience."
+                    "Our sports science laboratories powered by Kridasashtra equipment provide our students with industry-leading training experience."
                 </p>
                 <h3 class="text-lg font-bold text-black mt-4">Lakshmibai National College of Physical Education</h3>
                 <p class="text-gray-500 text-sm">Educational Institute</p>
@@ -652,7 +708,7 @@ clear. We want to transform sports performance using science.
             <p class="text-gray-600 mt-2">
                 We're proud to serve over 50+ government and private sports institutions across 15 states in India.
             </p>
-            <a href="#" class="text-blue-600 font-bold mt-4 inline-block">See all our partners →</a>
+            <a href="{% url 'partnership' %}" class="text-blue-600 font-bold mt-4 inline-block">See all our partners →</a>
         </div>
     </div>
 </section>
@@ -723,7 +779,7 @@ clear. We want to transform sports performance using science.
                 Let's Build a Successful Business Partnership
             </h2>
             <p class="text-gray-300 mt-4">
-                Join forces with KridaShastra to enhance sports infrastructure across India. We provide premium equipment tailored to your institution's needs.
+                Join forces with Kridasashtra to enhance sports infrastructure across India. We provide premium equipment tailored to your institution's needs.
             </p>
             <ul class="mt-6 space-y-2 text-gray-300">
                 <li>✔ Access to premium sports science equipment</li>
@@ -740,7 +796,7 @@ clear. We want to transform sports performance using science.
         <!-- Right Side (Why Partner?) -->
         <div class="bg-gray-900 p-6 rounded-lg shadow-md">
             <h3 class="text-2xl font-bold text-white">
-                Why Partner With KridaShastra?
+                Why Partner With Kridasashtra?
             </h3>
             <div class="mt-4">
                 <h4 class="text-lg font-bold text-yellow-500">Experience & Expertise</h4>

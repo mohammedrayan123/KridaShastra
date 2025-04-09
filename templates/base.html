@@ -11,7 +11,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>KridaShastra | Sports Science & Equipment</title>
+    <title>Kridasashtra | Sports Science & Equipment</title>
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
@@ -21,6 +21,9 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add this inside your <head> or right before </body> -->
+<script src="https://unpkg.com/alpinejs" defer></script>
+
     <style>
       @keyframes bounce {
         0%,
@@ -233,6 +236,8 @@
           
           <!-- 📌 Desktop Menu -->
           <div class="hidden md:flex space-x-4 ml-50">
+            
+            <a href="{% url 'index' %}" class="text-gray-700 hover:text-black font-bold">Home</a>
             <a href="{% url 'partnership' %}" class="text-gray-700 hover:text-black font-bold">Partnership</a>
             <a href="{% url 'school' %}" class="text-gray-700 hover:text-black font-bold">School Assessments</a>
             <a href="{% url 'products' %}" class="text-gray-700 hover:text-black font-bold">Products</a>
@@ -277,8 +282,10 @@
         
         <!-- 📱 Mobile Menu (Hidden by Default) -->
         <div id="mobileMenu" class="hidden bg-white w-full px-6 py-4 absolute top-16 left-0 shadow-md">
+          <a href="{% url 'index' %}" class="text-gray-700 hover:text-black font-bold">Home</a>
           <a href="{% url 'products' %}" class="block py-2 text-gray-700 hover:text-black">Products</a>
-          <a href="#" class="block py-2 text-gray-700 hover:text-black">Partnership</a>
+          <a href="{% url 'partnership' %}" class="block py-2 text-gray-700 hover:text-black">Partnership</a>
+          <a href="{% url 'school' %}" class="tblock py-2 text-gray-700 hover:text-black">School Assessments</a>
           <a href="{% url 'contact' %}" class="block py-2 text-gray-700 hover:text-black">Contact Us</a>
         </div>
       </nav>
@@ -474,17 +481,18 @@
     <!-- Tailwind CSS for animation -->
 
     <div
-      id="contactForm"
-      class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center opacity-0 invisible transition-opacity duration-300"
-    >
+  id="contactForm"
+  class="fixed inset-0 z-50 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center opacity-0 invisible transition-opacity duration-300"
+>
+
       <div
         class="bg-white rounded-lg shadow-lg w-[700px] md:w-[900px] p-6 flex transform scale-90 transition-transform duration-300"
       >
         <!-- Left Section: Text + GIF -->
         <div
-          class="w-1/2 flex flex-col justify-center items-center text-center p-6 bg-sky-100 rounded-l-lg"
+          class="w-1/2 flex flex-col justify-center items-center text-center p-6 bg-blue-100 rounded-l-lg"
         >
-          <h2 class="text-2xl font-bold text-sky-600 mb-4">Let's Connect!</h2>
+          <h2 class="text-2xl font-bold text-blue-600 mb-4">Let's Connect!</h2>
           <p class="text-gray-600 mb-6">
             Have a question? Fill out the form, and we'll get back to you soon.
           </p>
@@ -540,13 +548,13 @@
               <button
                 type="button"
                 id="closeBtn"
-                class="text-gray-600 hover:text-gray-800"
+                class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg"
               >
                 Cancel
               </button>
               <button
                 type="submit"
-                class="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded-lg"
+                class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg"
               >
                 Submit
               </button>
@@ -589,7 +597,7 @@
         <div>
           <div class="flex items-center space-x-2">
             <span class="text-2xl">🏆</span>
-            <h3 class="text-xl font-bold">KridaShastra</h3>
+            <h3 class="text-xl font-bold">Kridasashtra</h3>
           </div>
           <p class="text-gray-400 mt-3 text-sm leading-relaxed">
             Leading sports science equipment provider for government and private
@@ -606,14 +614,14 @@
         <div>
           <h3 class="text-lg font-semibold text-gray-200">Quick Links</h3>
           <ul class="mt-3 space-y-2 text-gray-400 text-sm">
-            <li><a href="#" class="hover:text-white transition">Home</a></li>
+            <li><a href="{% url 'index' %}" class="hover:text-white transition">Home</a></li>
             <li>
-              <a href="#" class="hover:text-white transition">Products</a>
+              <a href="{% url 'products' %}" class="hover:text-white transition">Products</a>
             </li>
             <li>
-              <a href="#" class="hover:text-white transition">Partnerships</a>
+              <a href="{% url 'partnership' %}" class="hover:text-white transition">Partnerships</a>
             </li>
-            <li><a href="#" class="hover:text-white transition">Contact</a></li>
+            <li><a href="{% url 'contact' %}" class="hover:text-white transition">Contact</a></li>
           </ul>
         </div>
 
@@ -621,15 +629,15 @@
         <div>
           <h3 class="text-lg font-semibold text-gray-200">Contact Us</h3>
           <p class="text-gray-400 text-sm mt-3">
-            KridaShastra Headquarters, <br />
-            Kharadi, Pune, Maharashtra <br />
+            Kridasashtra Headquarters, <br />
+            Pune, Maharashtra <br />
             India - 411014
           </p>
           <p class="text-gray-400 text-sm mt-3 flex items-center">
             📞 +91 9921404239
           </p>
           <p class="text-gray-400 text-sm flex items-center">
-            ✉ info@kridashastra.com
+            ✉ irfan@Kridasashtra.com
           </p>
         </div>
 

@@ -39,8 +39,7 @@ urlpatterns = [
     # Resources Page
     path('resources/', views.resources, name='resources'),
     
-    # Testimonials Page
-    path('testimonials/', views.testimonials, name='testimonials'),
+    path('request-info/', views.request_info, name='request_info'),
     
     # Contact Page
     path('contact/', views.contact, name='contact'),

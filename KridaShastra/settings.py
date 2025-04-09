@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-g+de)j^!#)em^c%p&cr6zvh#wao(&4!mygu#9$u6bhg#-bzkdv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['kridasashtra.com', 'www.kridasashtra.com', '185.199.53.247', '*']
 
@@ -131,6 +131,13 @@ else:
     STATIC_ROOT = '/var/www/kridashastra/static/'  # Adjusted for production
     MEDIA_ROOT = '/var/www/kridashastra/media/'
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.hostinger.com'  # or check your email dashboard for SMTP details
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'irfan@kridasashtra.com'
+EMAIL_HOST_PASSWORD = 'Ablpass@123'  # Or App Password if 2FA is enabled
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 
 
