@@ -40,6 +40,9 @@ urlpatterns = [
     path('resources/', views.resources, name='resources'),
     
     path('request-info/', views.request_info, name='request_info'),
+
+    path('submit-contact/', views.submit_contact, name='submit_contact'),
+    path('thank-you/', views.thank_you, name='thank_you'),
     
     # Contact Page
     path('contact/', views.contact, name='contact'),

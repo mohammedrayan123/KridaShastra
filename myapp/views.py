@@ -88,4 +88,38 @@ def contact_view(request):
             fail_silently=False,
         )
 
-    return HttpResponse("<h2>Thanks! Your request has been submitted.</h2><a href='/'>Back</a>")
+        messages.success(request, "Thank you! Your inquiry has been submitted.")
+        return redirect(request.path)
+
+    return render(request, 'contact.html')
+
+
+def submit_contact(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        phone = request.POST['phone']
+
+        # Compose email message
+        message = f"""
+        New Contact Submission:
+
+        Name: {name}
+        Email: {email}
+        Phone: {phone}
+        """
+
+        send_mail(
+            subject="New Contact Form Submission",
+            message=message,
+            from_email="irfan@kridasashtra.com",
+            recipient_list=["irfan@kridasashtra.com"],
+            fail_silently=False,
+        )
+
+        return redirect('thank_you')
+
+    return redirect('/')  # fallback
+
+def thank_you(request):
+    return render(request, 'main/thank_you.html')
